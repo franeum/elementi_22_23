@@ -287,3 +287,184 @@ Non tutti i suoni possiedono i 4 transitori. In linea di massima, ogni suono nas
 ---
 
 # Intensità
+
+---
+
+## Ascoltiamo due suoni
+
+- suono 1
+<audio controls>
+  <source src="./SOUNDS/suono1.mp3" type="audio/mpeg">
+</audio> 
+
+- suono 2
+<audio controls>
+  <source src="./SOUNDS/suono2.mp3" type="audio/mpeg">
+</audio> 
+
+---
+
+## Quale dei due suona più `naturale`?
+
+---
+
+![width:700](./images/amp_lineare.svg)
+
+---
+
+![width:700](./images/amp_log.svg)
+
+---
+
+## crescendo
+
+<audio controls>
+  <source src="./SOUNDS/crescendo.mp3" type="audio/mpeg">
+</audio> 
+
+---
+
+### Il `crescendo` del suono 2 risulta più `naturale` perché non procede linearmente, ma `logaritmicamente`
+
+---
+
+### I logaortmi sono alla base della misurazione dell'intensità sonora
+
+---
+
+### Per misurare la pressione sonora si usa il `Pascal`
+- corrisponde a 1 `newton` per metro quadrato
+- consente di misurare la pressione in ordini di grandezza molto diversi
+
+---
+
+|suono/rumore|quantità in Pa|
+|---|---|
+| lancio di un missile|20000|
+|rottura del timpano| 2000|
+|soglia del dolore|63.2|
+|concerto Rock| 20|
+|martello pneumatico|0.632|
+|traffico cittadino| 0.2|
+|conversazione normale|0.02|
+|fruscio di foglie|0.000632|
+|soglia di udibilità| 0.00002 |
+
+---
+
+## Questi valori non sono molto utili
+- C'è troppa differenza
+- ...quindi non si percepisce 
+- Non è comoda da utilizzare
+
+---
+
+## Si usa quindi il `rapporto` fra un valore della pressione sonora (qualunque) e un altra usato come riferimento
+
+---
+
+## Il valore di riferimento è la `soglia di udibilità` misurata in Pascal:
+~ 0.00002
+
+---
+
+### Per calcolare il rapporto fra il rumore provocato dal lancio di un missile e la soglia di udibilità potremmo fare:
+
+20000 / 0.00002 = 100000000 => 100 milioni
+
+---
+
+### Se possibile, abbiamo peggiorato la situazione, ma esiste uno strumento che ci permette di semplificare (e comprimere) la rappresentazione dei rapporti: il `logaritmo`
+
+---
+
+# Logaritmo
+
+---
+
+## E' l'esponente a cui dobbiamo elevare un valore per ottenerne un altro.
+
+si abbia:
+
+$$ a = b^x $$
+
+dove $a$ è il valore, $b$ è la base e $x$ è l'esponente. Il logaritmo ci permette di ottenere $x$ a partire dalla base $b$ e dal valore $a$
+
+---
+
+$$ x = \log_b(a) $$
+
+---
+
+### Usando i rapporti e i logaritmi possiamo costruire una nuova scala di valori, basata sul Bel
+
+$$ B = \log_{10}(p/p_{ref}) $$
+
+--- 
+
+### Effettivamente il Bel è un esponente, infatti:
+
+$$ 10^{(p/p_{ref})} = B $$
+
+---
+
+### Sulla base di questa formula possiamo calcolare i Bel del suono del lancio di un missile (20000 Pascal)
+
+$$ Bel = \log_{10}(20000/0.00002) $$
+$$ Bel = \log_{10}(100000000) $$
+$$ Bel = 8 $$
+
+---
+
+## Al contrario:
+
+$$ 10^8 = 100000000 $$
+
+---
+
+## Generalmente per quantificare le potenze e le intensità si usa il deciBel, che è la decima perte del Bel. 
+- per ottenere i decibel basta moltiplicare i Bel per 10, la formula quindi diventa:
+
+$$ deciBel = 10 \cdot \log_{10}(p/p_{ref}) $$
+
+---
+
+### Questa formula è adatta ad quantificare la potenza e l'intensità, ma non la pressione. Per quest'ultima quantità è necessario applicare il logaritmo alla potenza del rapporto:
+
+$$ deciBel = 10 \cdot \log_{10}(p/p_{ref})^2 $$
+
+Dato che, per le proprietà dei logaritmi, si ha:
+
+$$ \log(x \cdot y) = \log x + \log y $$
+
+la formula precedente si può semplificare in questo modo:
+
+$$ deciBel = 10 \cdot \log_{10}(p/p_{ref}) \cdot 2 $$
+
+---
+
+# Sound Pressure Level
+
+$$ dB_{SPL} = 20 \cdot \log_{10}(p/p_{ref}) $$
+
+--- 
+
+## Nel digitale...
+
+- Come sappiamo, il `range` di valori ammessi in ampiezza va da -1 a 1
+- 1 è il valore massimo, -1 è il massimo sul campo dei positivi, 0 è assenza di segnale
+- quindi possiamo affermare che l'ampiezza del segnale va da 0 (assenza) a 1 (massimo segnale)
+
+---
+
+Per calcolare l'intensità e la pressione sonora nel digitale si usano le seguenti due formule:
+
+$$ 10 * log_{10} A $$
+$$ 20 * log_{10} A $$
+
+dove $A$ rappresenta l'ampiezza
+
+--- 
+
+## Se l'ampiezza va da 0 a 1, la scala dei deciBel in un sistema digitale va da -inf a 0 
+

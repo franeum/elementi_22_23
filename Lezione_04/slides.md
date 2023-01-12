@@ -53,13 +53,17 @@ dataState: "no-title-footer"
 
 --
 
-## All'interno dei circuiti elettrici e `fra` un circuito e l'altro passa corrente elettrica attivata (o inibita) dai `transistor`
+## la corrente che attraversa questi circuiti, codifica le informazioni 
 
 ---
 
-## Si distinguono quindi due possibili condizioni:
-- passaggio di corrente {: .fragment}
-- non passaggio di corrente {: .fragment}
+## Attraverso numerosi componenti chiamati `transistor`, il passaggio di corrente è consentito o inibito 
+
+--
+
+## Si distinguono quindi due condizioni:
+- passaggio di corrente -> tensione massima {: .fragment}
+- non passaggio di corrente -> tensione minima {: .fragment}
 
 --
 
@@ -68,8 +72,6 @@ dataState: "no-title-footer"
 --
 
 ## questi due `STATI` vengono rappresentati con `0` e `1`
-
----
 
 ---
 
@@ -86,11 +88,27 @@ dataState: "no-title-footer"
 ---
 
 ## L'informazione all'interno di un elaboratore è rappresentata mediante sequenze di 0 e 1:
-001011010100101101... {: .fragment}
+...01011010010... {: .fragment}
+
+--
+
+<img src=images/segnale_digitale.svg />
 
 ---
 
 ## L'entità minima di informazione è chiamata `BIT` (*binary digit*)
+
+--
+
+<img src=images/segnale_digitale_bit.svg />
+
+---
+
+## La `commutazione` di stato del segnale è regolata da un altro segnale elettrico, che scandisce la frequenza di `clock`
+
+--
+
+<img src=images/clock.svg />
 
 ---
 
@@ -98,11 +116,11 @@ dataState: "no-title-footer"
 
 ---
 
-## le prime applicazioni trattavano essenzialmente numeri, quindi l'informazione era `NUMERICA`
+## le prime applicazioni trattavano essenzialmente numeri, quindi l'informazione era quasi esclusivamente `NUMERICA`
 
 --
 
-## quindi SI TRATTAVA DI CONVERTIRE NUMERI DECIMALI IN INFORMAZIONE BINARIA
+## SI TRATTAVA QUINDI DI CONVERTIRE NUMERI DECIMALI IN INFORMAZIONE BINARIA
 
 --
 
@@ -119,23 +137,33 @@ dataState: "no-title-footer"
 
 ---
 
-## successivamente è diventato necessario codificare anche caratteri
+## con 3 bit possiamo rappresentare 8 numeri diversi, perché?
 
 --
 
-## associando ad una sequenza binaria una lettera, o il simbolo di un numero
+$$2^n$$
+
+*dove $n$ rappresenta il numero dei bit*
 
 ---
 
-## la tabella `ASCII` (*American Standard Code for Information Interchange*) ci permette di convertire caratteri in sequenze binarie secondo uno standard internazionale che prevede l'utilizzo di 8 bit
+## successivamente è diventato necessario codificare anche i caratteri
+
+## associando ad una sequenza binaria una lettera, il simbolo di un numero e la punteggiatura {: .fragment}
+
+---
+
+## la tabella `ASCII` (*American Standard Code for Information Interchange*) ci permette di convertire caratteri in sequenze binarie (e viceversa) secondo uno standard internazionale che prevede l'utilizzo di 8 bit
 
 --
 
 ## Quante combinazioni ci sono con 8 bit, dove ogni bit può assumere due possibili valori?
 
+--
+
 $2 ^ 8 = 256$
 
---
+---
 
 | simbolo | ascii code |
 |---------|------------|
@@ -198,7 +226,7 @@ $2 ^ 8 = 256$
 
 ### Per ottenere un'approssimazione migliore, quindi una rappresentazione più fedele
 
-### possiamo aumentare il numero delle celle della griglia, cioè dei `PIXEL`
+### possiamo aumentare il numero delle celle della griglia, cioè dei `PIXEL` {: .fragment}
 
 --
 
@@ -207,6 +235,10 @@ $2 ^ 8 = 256$
 ---
 
 ### La quantità di *pixel* nella griglia, rappresentata da una matrice $$m \cdot n$$ dove $m\space$ sono le righe e $n\space$  le colonne è detta `RISOLUZIONE`
+
+--
+
+## Maggiore è il numero ddei pixel, migliore è la risoluzione
 
 ---
 
@@ -315,3 +347,10 @@ $2 ^ 8 = 256$
 - i computer sono diventati molto economici {: .fragment}
 - ...e sempre più veloci {: .fragment}
 
+---
+
+# Esercitazione
+
+---
+
+## Conversione da decimale a binario e viceversa

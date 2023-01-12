@@ -15,21 +15,21 @@
 ## Il mezzo di propagazione possiede un certo grado di `elasticità`, che determina la velocità a cui il suono si propaga.
 
 | materiale (21 gradi) | velocità in m/s |
-| --- | --- |
-| aria | 344 |
-| acciaio | 5000-5900 |
-| acqua | 1480 |
-| calcestruzzo | 3100 |
+|----------------------|-----------------|
+| aria                 | 344             |
+| acciaio              | 5000-5900       |
+| acqua                | 1480            |
+| calcestruzzo         | 3100            |
 
 ---
 
 | materiale (21 gradi) | velocità in m/s |
-| --- | --- |
-| legno di olmo | 4108 |
-| legno di pino | 3313 |
-| Metano | 430 |
-| Piombo | 1230 |
-| Vetro | 5500 |
+|----------------------|-----------------|
+| legno di olmo        | 4108            |
+| legno di pino        | 3313            |
+| Metano               | 430             |
+| Piombo               | 1230            |
+| Vetro                | 5500            |
 
 ---
 
@@ -121,9 +121,9 @@ Se un'onda ha frequenza 440 Hz, quanto varrà T, cioè il periodo?
 
 # Intervallo di frequenze udibili
 
-| < 20Hz | 20Hz - 20000Hz | > 20000Hz |
-| --- | --- | --- |
-| infrasuoni | range udibile | ultrasuoni |
+| < 20Hz     | 20Hz - 20000Hz | > 20000Hz  |
+|------------|----------------|------------|
+| infrasuoni | range udibile  | ultrasuoni |
 
 ---
 
@@ -338,17 +338,17 @@ Non tutti i suoni possiedono i 4 transitori. In linea di massima, ogni suono nas
 
 ---
 
-|suono/rumore|quantità in Pa|
-|---|---|
-| lancio di un missile|20000|
-|rottura del timpano| 2000|
-|soglia del dolore|63.2|
-|concerto Rock| 20|
-|martello pneumatico|0.632|
-|traffico cittadino| 0.2|
-|conversazione normale|0.02|
-|fruscio di foglie|0.000632|
-|soglia di udibilità| 0.00002 |
+| suono/rumore          | quantità in Pa |
+|-----------------------|----------------|
+| lancio di un missile  | 20000          |
+| rottura del timpano   | 2000           |
+| soglia del dolore     | 63.2           |
+| concerto Rock         | 20             |
+| martello pneumatico   | 0.632          |
+| traffico cittadino    | 0.2            |
+| conversazione normale | 0.02           |
+| fruscio di foglie     | 0.000632       |
+| soglia di udibilità   | 0.00002        |
 
 ---
 
@@ -429,7 +429,7 @@ $$ deciBel = 10 \cdot \log_{10}(p/p_{ref}) $$
 
 ---
 
-### Questa formula è adatta ad quantificare la potenza e l'intensità, ma non la pressione. Per quest'ultima quantità è necessario applicare il logaritmo alla potenza del rapporto:
+### Questa formula è adatta a quantificare la potenza e l'intensità, ma non la pressione. Per quest'ultima quantità è necessario applicare il logaritmo alla potenza del rapporto:
 
 $$ deciBel = 10 \cdot \log_{10}(p/p_{ref})^2 $$
 

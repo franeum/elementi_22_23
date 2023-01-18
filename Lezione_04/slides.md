@@ -314,7 +314,7 @@ $2 ^ 8 = 256$
 
 ---
 
-## Si effettuano dei `campionamenti` sull'onda (cioè si misura il valore dell’onda a intervalli costanti di tempo) e si codificano in forma digitale le informazioni estratte da tali campionamenti
+### Si effettuano dei `campionamenti` sull'onda (cioè si misura il valore dell’onda a intervalli costanti di tempo) e si codificano in forma digitale le informazioni estratte da tali campionamenti
 <img src=images/campionamento.svg /> {: .fragment}
 
 ---

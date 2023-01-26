@@ -43,7 +43,7 @@ dataState: "no-title-footer"
 ---
 
 - Il software è l’insieme dei `programmi` che vengono eseguiti dal sistema.
-- Un programma è un insieme ordinato di istruzioni
+- Un programma è un `insieme ordinato di istruzioni`
 sintatticamente corrette per l'elaboratore la cui esecuzione
 risolve un determinato problema.
 - Tipi di software:
@@ -56,14 +56,17 @@ risolve un determinato problema.
 
 ---
 
--
 ## Il Sistema Operativo (SO)
 È un insieme di programmi che gestisce il funzionamento di
 base del computer.
 - Sono gestite dal sistema operativo tutte le funzioni generali
-della macchina, come l’aspetto grafico delle visualizzazioni
-su monitor, la scrittura e la lettura dai dischi, la messa in
-esecuzione e la chiusura dei vari programmi, la ricezione e
+della macchina:
+    - l’aspetto grafico delle visualizzazioni
+su monitor, 
+    - la scrittura e la lettura dai dischi, 
+    - la messa in
+esecuzione e la chiusura dei vari programmi, 
+    - la ricezione e
 trasmissione di dati attraverso tutti i dispositivi di I/O.
 - Il sistema operativo rimane sempre attivo dal momento in
 cui viene caricato nella memoria centrale (all’accensione
@@ -92,17 +95,17 @@ file, dispositivi di I/O, per portare a termine il suo compito.
 
 Il SO è responsabile delle seguenti attività coinvolte nella
 gestione dei processi:
-- creazione e cancellazione dei processi
-- sospensione e riesumazione dei processi
+- creazione e cancellazione
+- sospensione e riesumazione
 - fornire meccanismi per
-    - sincronizzazione dei processi
-    - comunicazione tra processi
-    - evitare, prevenire e risolvere i deadlock.
+    - sincronizzazione
+    - comunicazione
+    - evitare, prevenire e risolvere i *deadlock*.
 
 ---
 
 ### sistemi mono-tasking
- In sistemi di questo tipo è possibile eseguire un solo
+In sistemi di questo tipo è possibile eseguire un solo
 programma (*processo*) alla volta: i programmi devono essere eseguiti
 in modo sequenziale e si può mandare in esecuzione un
 programma solo quando quello precedente ha terminato
@@ -110,23 +113,17 @@ l'esecuzione
 
 ---
 
-- Supponiamo che il nostro sistema sia un bar in cui un barista serve diversi clienti
-- Il barista è il corrispondente del processore, i clienti sono
-l’equivalente dei processi da eseguire
+<img src=images/monotasking.svg />
 
 ---
 
-Il barista prende un'ordinazione, prepara, consegna. Mentre il cliente consuma, il processore resta in attesa per proseguire nell'esecuzione del processo.
-
----
-
-Per ovviare a questi tempi di attesa (con riduzione della produttività) il processore può spostarsi su altri processi
-
---
-
-Il `multi-tasking` funziona proprio in questo modo:
+### sistemi multi-tasking
 - Il processore esegue tutti i programmi `contemporaneamente`
-- In realtà passa da uno all'altro ciclicamente
+- In realtà passa da uno all'altro ciclicamente grazie a uno `scheduler`
+
+---
+
+<img src=images/multitasking.svg />
 
 ---
 
@@ -140,17 +137,6 @@ utilizzare il processore che è occupato da un altro processo.
 
 ---
 
-- Il processore ha un `timer` e ogni *n* secondi sospende il
-servizio che sta effettuando e passa a servire un altro processo
-- La politica di gestione in cui il barista divide il suo tempo
-tra i vari clienti assegnando a ciascuno un certo intervallo di
-tempo è implementata nei S.O. multi-tasking e prende il
-nome di `Round-Robin`
-- La politica di gestione in cui il processore serve in modo
-sequenziale i vari processi viene chiamata `FIFO`: i processi vengono *pescati* dalla `Ready list` secondo il principio del `first-in-first-out`
-
----
-
 ## gestore della memoria principale
 La memoria principale è un grande insieme di parole (*word*), ognuna
 identificata univocamente con un indirizzo, e può considerarsi
@@ -158,7 +144,7 @@ come un deposito di dati velocemente accessibili da CPU e
 dispositivi di I/O. Tale memoria è volatile e perde i dati in
 caso di `system failure` (*crash*, spegnimento, etc...)
 
----
+--
 
 Il SO è responsabile delle seguenti attività:
 - tenere traccia delle aree di memoria correntemente
@@ -200,7 +186,7 @@ driver)
 ---
 
 ## Gestore dei files
-Un file è inteso come una collezione di informazioni correlate,
+Un file è inteso come una `collezione di informazioni correlate`,
 cioè un insieme di byte che codificano una certa entità logica
 (testo, immagine, suono, programma, etc), organizzati
 secondo un certo formato, memorizzati su supporti di
@@ -212,7 +198,7 @@ Comunemente rappresentano programmi e dati.
 Il SO è responsabile di:
 - creazione e cancellazione di files
 - creazione e cancellazione di directory
-supporto di primitive (semplici funzioni o programmi) per la
+- supporto di primitive (semplici funzioni o programmi) per la
 gestione di files e directory
 - allocazione di files in memoria secondaria
 - salvataggio di dati su supporti non volatili.
@@ -301,13 +287,15 @@ partire dalla radice dell'albero
 
 La struttura è quella di un `albero`, dove si distinguono:
 - una `radice` (il punto più *a monte*)
-- di `nodi` (le *directory*)
-- le `foglie` (i *files*)
+- `nodi` (le *directory*)
+- `foglie` (i *files*)
+
+*NB: le foglie appartenenti allo stesso nodo non possono condividere lo stesso nome*
 
 --
 
 - Una foglia può essere identificata *univocamente* tramite il suo percorso dalla radice.
-- ad esempio `photoshop` è identificato tramite il percorso: `/floppy/applicazioni/grafica/photoshop`
+- ad esempio `photoshop` (nell'immagine precedente) è identificato tramite il percorso: `/floppy/applicazioni/grafica/photoshop`
 
 ---
 

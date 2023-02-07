@@ -107,6 +107,12 @@ Quando si scrive il nome dell'oggetto, verrà poi creato l'oggetto stesso con gl
 - Ogni oggetti ha un numero prefissato di entrate e uscite
 - Alcune classi di oggetti hanno *inlet* e *outlet* definiti in base al numero di *creation argument*
 
+--
+
+<img src=images/003_midisynth.jpg />
+
+
+
 
 
 

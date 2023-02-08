@@ -1,0 +1,12 @@
+#N canvas 1173 278 450 300 12;
+#X floatatom 194 87 5 0 0 0 - - -;
+#X floatatom 194 136 5 0 0 0 - - -;
+#N canvas 0 61 408 297 sum10 1;
+#X obj 167 98 inlet;
+#X obj 167 123 + 10;
+#X obj 167 148 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X restore 194 111 pd sum10;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;

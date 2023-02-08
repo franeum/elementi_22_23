@@ -1,0 +1,7 @@
+#N canvas 686 351 450 300 12;
+#X obj 238 59 inlet~;
+#X obj 234 238 outlet~;
+#X floatatom 178 118 5 0 0 0 feedback - -;
+#X floatatom 178 141 5 0 0 0 time - -;
+#X floatatom 178 166 5 0 0 0 gain - -;
+#X coords 0 -1 1 1 120 90 1 100 100;

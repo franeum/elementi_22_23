@@ -357,4 +357,144 @@ I message box possono contenere variabili, che si denotano con il prefisso `$` s
 
 <img src=images/012_variable.jpg />
 
+---
 
+## segnali audio
+
+---
+
+In Pd si può:
+1. sintetizzare suoni
+2. analizzare suoni in entrata
+3. elaborare suoni entrata al fine di produrre audio trasformato in uscita
+4. integrare elaborazione audio con altri media
+
+---
+
+- I segnali audio in pd sono rappresentati con numeri float a 32 bit. Con questa quantità abbiamo a disposizione $2^{32}$ possibili variazioni dinamiche su un singolo campione.
+- Le schede audio, generalmente, campionano l'audio a 16 o 24 bit, quindi i 32 bit di pd sono più che sufficienti per non perdere qualità
+- I suoni in etrata saranno sempre compresi fra -1 e 1, come quelli in uscita. In caso di uscite con audio di ampiezza superiore saranno tagliati in modo da rientrarein quel range
+
+---
+
+La frequenza di campionamento è di *default* pari a 44100 Hz, ma può essere impostata diversamente all'occorrenza (dalla finestra delle opzioni audio)
+
+---
+
+- Pd può leggere file in vari formati: WAV, AIFF, AU, ma non mp3
+- Se si vuole leggere un mp3, è necessario prima convertirlo in un formato compatibile
+
+---
+
+## oggetti con la ~ (tilde) e connessioni audio
+
+La computazione audio è svolta dagli oggetti con la tilde, che comunicano fra loro attraverso connessioni visibili, più *spesse* di quelle per i messaggi
+
+---
+
+Quando il DSP viene attivato:
+1. pd ordina gli oggetti audio in un grafo
+2. passa l'audio da un oggetto all'altro in blocchi da 64 campioni, alla frequenza di campionamento
+
+Se, ad esempio, la frequenza di campionamento è 44100 Hz, verranno elaborati in un secondo 689 pacchetti (circa) da 64 campioni. L'elaborazione dura quindi 1.45 millisecondi.
+
+---
+
+- È un errore connettere un outlet audio a un inlet non-audio. 
+- Non è sempre vero viceversa. Gli inlet degli oggetti audio possono infatti ricevere sia segnale audio che messaggi. Questi ultimi saranno convertiti internamente in segnale.
+
+---
+
+- Il grafo delle connessioni DEVE essere `aciclico`, ossia non deve contenere cicli: le connessioni non possono essere in loop 
+
+<img src=images/013_cyclic_audio.jpg />
+
+---
+
+## conversione segnale/messaggi e messaggi/segnale
+
+- Si può convertire esplicitamente un messaggio in un segnale audio con l'oggetto `sig~`
+- Oggetti come *osc~*, *phasor~*, *+~*, **~* e altri possono ricevere un messaggio e convertirlo implicitamente (cioè internamente)
+- Si può convertire un segnale audio in un messaggio solo se abbiamo un meccanismo di campionamento, cioè un sistema che ci permetta di catturare un singolo campione in un dato momento
+- l'oggetto `snapshot~` effettua questa operazione
+- si può anche scrivere il segnale in un array (tabella di valori) e accedere a quei valori successivamente come semplici valori numerici
+
+--
+
+<img src=images/014_snapshot.jpg />
+
+---
+
+## connessioni di segnali non locali
+
+- Il segnale può essere passato *non localmente*: per esempio da una finestra all'altra o al fine di creare loop audio
+- Gli oggetti che permettono di passare l'audio non localmente sono `send~/receive~` (abbreviati rispettivamente in s~ e r~), `throw~/catch~`, `delwrite~/delread~`
+
+--
+
+<img src=images/015_loop_audio.jpg />
+
+---
+
+## il tempo
+
+Pd usa numeri float a 64 bit per rappresentare il tempo, permettendo un trattamento molto accurato, anche se all'utente il tempo è rappresentato in millisecondi
+
+---
+
+### audio e messaggi
+
+- Audio e messaggi sono interconnessi, l'elaborazione audio è programmata ogni 64 campioni, quindi, se siamo a 44100, ci sarà un'elaborazione ogni 1.45 millisecondi
+- Si può accendere e spegnere il DSP con un messaggio:
+    - per attivare: pd dsp 1
+    - per disattivare: pd dsp 0
+- L'esecuzione di messaggi avviene fra l'elaborazione di un blocco audio e l'altro, mai durante un blocco
+
+---
+
+## subpatches
+
+Pd offre due meccanismi per incapsulare funzioni e comportamenti
+1. *una-tantum subpatch*
+2. *abstraction*
+
+In entrambi i casi la subpatch appare nella patch come un object box
+
+--
+
+### una tantum subpatch
+
+Si crea nominando un *object box* con l'atomo `pd` seguito da un symbol arbitrario e al suo interno si creano gli oggetti inlet e outlet per permettere all'oggetto di *parlare* con la patch madre
+
+--
+
+<img src=images/017_sum10.jpg />
+
+--
+
+<img src=images/016_subpatch_sum10.jpg />
+
+---
+
+Si possono creare anche *subpatch* audio; al loro interno si troveranno gli oggetti `inlet~` e `outlet~`
+
+---
+
+### abstraction
+
+Simili alle subpatch una tantum, se ne differenziano perché sono salvate su file e possono essere caricate da qualunque patch (senza bisogno del prefisso pd)
+
+---
+
+<img src=images/018_abstraction.jpg />
+
+---
+
+### graph on parent
+
+- Si possono creare subpatch o abstraction *grafiche* usando l'opzione *graph on parent*. Col tasto destro del mouse di un'abstraction ( su una una tantum subpatch) si sceglie graph on parent (o *Mostra sulla parent*) nella finestra delle proprietà e si imposta una porzione di finestra che verrà visualizzata sulla *parent*
+- Tutte le GUI presenti all'interno di quella porzione verranno visualizzate sulla *parent*
+
+--
+
+<img src=images/019_graphonparent.jpg />

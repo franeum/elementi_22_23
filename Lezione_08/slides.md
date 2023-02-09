@@ -42,10 +42,6 @@ dataState: "no-title-footer"
 
 ---
 
-<img src=images/klaus.jpg />
-
----
-
 ## documenti
 
 - I documenti di pd sono chiamati `patch` o `canvas`
@@ -227,11 +223,11 @@ Alle sub-patch si può accedere anche con il tasto sinistro (in run mode) o con 
 
 ### Anatomia di un messaggio
 
-- Un messaggio è costituito da un `selettore` e da un certo numero di `argomenti`
-- Il selettore è un *symbol*, cioè una stringa (non numerica) priva di spazi, virgola o punto e virgola
-- Gli argomenti possono essere simboli o numeri
+- Un messaggio è costituito da un `selettore` e da un certo numero di `argomenti` (da 0 a molti)
+- Il selettore è un atomo di tipo *symbol*, cioè una stringa (non numerica) priva di spazi, virgola o punto e virgola
+- Gli argomenti possono essere atomi di tipo simbolo o atomi numerici
     - I numeri in Pd sono float a 32 bit, in modo da poter rappresentare valori fra -16777216 e 16777216
-    - Non esistono numero interi, ma solo con la virgola (a differenza di Max dove esistono sia gli interi che i float)
+    - Non esistono numeri interi, ma solo con la virgola (a differenza di Max dove esistono sia gli interi che i float)
 
 --
 
@@ -356,6 +352,37 @@ I message box possono contenere variabili, che si denotano con il prefisso `$` s
 --
 
 <img src=images/012_variable.jpg />
+
+---
+
+## oggetti utili
+
+- *random*
+- *+*,*-*,*/*,*\**, *pow*
+- *select*
+- *trigger*
+- *print*
+- *metro*
+
+---
+
+## oggetti midi
+
+- *makenote*
+- *noteout* 
+
+---
+
+### esercizi
+1. crea una patch che alla pressione di un bang generi un numero casuale fra 0 e 999
+2. Crea una patch che alla pressione di un bang generi un numero casuale fra 500 e 1499
+3. crea una patch che generi una nota MIDI pari a 60, della durata di 1000 millisecondi con *velocity* 100
+3. Crea una patch che tramite un *metro* generi ogni secondo una nota MIDI casuale compresa fra 48 e 72 (compreso). Ogni nota dura 1000 millisecondi e ha *velocity* pari a 100
+
+---
+
+1. Crea una patch che generi numeri casuali compresi fra zero e 3 (incluso) e che accenda 4 bang messi in fila. Il primo bang viene acceso quando se il numero generato è 0, il secondo se il numero è 1 e così via...
+2. La seguente funzione converte una nota MIDI in un valore di frequenza in Hz: $$440 * 2^{(m - 69)/12}$$ implementa questa funzione in patch, dove $m$ è la nota MIDI in entrata, impostabile tramite *number box*
 
 ---
 
@@ -498,3 +525,11 @@ Simili alle subpatch una tantum, se ne differenziano perché sono salvate su fil
 --
 
 <img src=images/019_graphonparent.jpg />
+
+---
+
+## arrays
+
+Gli *array* in pd si possono creare in due modi:
+1. dal menu put (e in questo caso avremo un array visibile in path)
+2. tramite l'oggetto `array` (in questo caso la parte visibile dell'array sarà incapsulata all'interno dell'oggetto)

@@ -1,0 +1,9 @@
+#N canvas 284 295 137 125 10;
+#X obj 10 12 inlet;
+#X obj 10 37 list prepend set;
+#X obj 10 62 list trim;
+#X obj 10 87 outlet;
+#X text 59 100 f.bianchi;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;

@@ -1,0 +1,11 @@
+#N canvas 100 106 420 400 10;
+#X obj 115 200 vs.blsaw~ 400;
+#X obj 115 222 vs.gain~;
+#X obj 115 334 dac~;
+#X obj 10 38 vs.dspturn;
+#X floatatom 115 153 5 0 0 0 - - -;
+#X text 150 152 frequency (float/signal);
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 4 0 0 0;

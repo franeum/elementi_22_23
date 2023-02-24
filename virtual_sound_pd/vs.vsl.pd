@@ -1,0 +1,4 @@
+#N canvas 449 260 669 326 10;
+#X obj 10 10 cnv 25 400 60 empty empty VirtualSoundLibrary 5 22 1 24
+-191407 -1 0;
+#X text 15 50 Output random integers within a step range;

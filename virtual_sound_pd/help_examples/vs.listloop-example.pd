@@ -1,0 +1,15 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.listloop;
+#X msg 137 168 4 8 12 16 20 24;
+#X obj 115 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 133 130 outputs next item of the list;
+#X obj 260 185 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 279 177 reset to first item;
+#X text 279 190 at next output;
+#X floatatom 115 222 5 0 0 0 - - -;
+#X connect 0 0 7 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 4 0 0 1;

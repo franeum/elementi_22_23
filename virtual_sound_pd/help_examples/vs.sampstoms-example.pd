@@ -1,0 +1,6 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.sampstoms;
+#X floatatom 115 232 0 0 0 1 milliseconds - -;
+#X floatatom 115 172 5 0 0 1 samples - -;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;

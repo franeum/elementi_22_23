@@ -1,0 +1,12 @@
+#N canvas 100 138 325 264 10;
+#X obj 60 139 vs.% 3;
+#X floatatom 60 65 5 0 0 0 - - -;
+#X floatatom 60 181 5 0 0 0 - - -;
+#X floatatom 93 113 5 0 0 0 - - -;
+#X text 95 57 change dividend;
+#X text 95 69 and perform division;
+#X text 127 113 change divisor (also float);
+#X text 95 181 rest;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 1;

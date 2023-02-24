@@ -1,0 +1,7 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 146 noise~;
+#X obj 115 222 vs.spectroscope~ 1 140 70;
+#X obj 115 200 vs.lop~ 1000;
+#X obj 16 45 vs.dspturn;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;

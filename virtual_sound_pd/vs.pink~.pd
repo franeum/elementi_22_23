@@ -1,0 +1,20 @@
+#N canvas 232 160 374 301 10;
+#X obj 23 19 noise~;
+#X obj 23 219 outlet~;
+#X obj 23 69 rzero~ 0.984436;
+#X obj 23 94 rpole~ 0.947906;
+#X obj 23 119 rzero~ 0.833923;
+#X obj 23 144 rpole~ 0.535675;
+#X obj 23 169 rzero~ 0.0756836;
+#X obj 23 194 *~ 0.162;
+#X obj 23 44 rpole~ 0.995728;
+#X text 22 261 f.bianchi \, see http://www.firstpr.com.au/dsp/pink-noise
+;
+#X connect 0 0 8 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 1 0;
+#X connect 8 0 2 0;

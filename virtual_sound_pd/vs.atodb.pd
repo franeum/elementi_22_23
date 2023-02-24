@@ -1,0 +1,12 @@
+#N canvas 569 215 232 207 10;
+#X obj 24 117 expr log10($f1) * 20;
+#X obj 24 89 max 0;
+#X obj 24 62 route float bang;
+#X obj 24 37 inlet amp;
+#X obj 24 143 outlet db;
+#X text 157 178 f.bianchi;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 2 1 1 0;
+#X connect 3 0 2 0;

@@ -1,0 +1,12 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 125 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 125 156 seed 1972;
+#X floatatom 196 190 5 0 0 0 - - -;
+#X obj 115 220 vs.xrandom 100;
+#X text 231 189 set the range;
+#X obj 115 242 print;
+#X connect 0 0 3 0;
+#X connect 1 0 3 0;
+#X connect 2 0 3 1;
+#X connect 3 0 5 0;

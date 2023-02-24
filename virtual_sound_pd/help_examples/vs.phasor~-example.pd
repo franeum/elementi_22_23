@@ -1,0 +1,13 @@
+#N canvas 100 106 420 560 10;
+#X obj 15 59 vs.dspturn;
+#X obj 184 225 bng 15 100 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 115 262 vs.scope~;
+#X obj 115 200 vs.phasor~ 1;
+#X floatatom 115 156 5 0 0 1 frequency - -;
+#X floatatom 308 228 5 0 0 0 - - -;
+#X text 305 210 set resolution;
+#X connect 3 0 2 0;
+#X connect 3 1 1 0;
+#X connect 4 0 3 0;
+#X connect 5 0 2 1;

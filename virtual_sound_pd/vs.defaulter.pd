@@ -1,0 +1,7 @@
+#N canvas 205 123 216 117 10;
+#X obj 21 22 inlet;
+#X obj 21 73 outlet;
+#X obj 21 47 expr if ($f1 == 0 \, \$1 \, $f1);
+#X text 80 91 f.bianchi - M.Giri;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;

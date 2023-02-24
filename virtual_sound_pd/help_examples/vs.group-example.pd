@@ -1,0 +1,10 @@
+#N canvas 100 106 420 560 10;
+#X floatatom 115 131 5 0 0 0 - - -;
+#X obj 115 200 vs.group 6;
+#X obj 115 222 print;
+#X obj 149 175 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 165 174 output immediately;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;

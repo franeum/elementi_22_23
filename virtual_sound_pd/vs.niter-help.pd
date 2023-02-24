@@ -1,0 +1,67 @@
+#N canvas 200 100 970 850 12;
+#X declare -path help_examples;
+#X obj 100 20 declare -path help_examples;
+#X obj 15 15 cnv 15 940 60 empty empty vs.niter 20 20 0 36 -233017 -66577
+
+0;
+#X obj 75 105 cnv 15 880 140 empty \$0-canvas-description empty 20
+12 0 14 -233017 -66577 0;
+#X obj 555 255 cnv 15 400 360 empty \$0-canvas-outlets empty 20 12
+0 14 -233017 -66577 0;
+#X obj 75 255 cnv 15 400 360 empty \$0-canvas-inlets empty 20 12 0
+14 -233017 -66577 0;
+#X obj 75 625 cnv 15 880 120 empty \$0-canvas-args empty 20 12 0 14
+-233017 -66577 0;
+#X obj 75 755 cnv 15 880 80 empty \$0-canvas-see empty 20 12 0 14 -233017
+-66577 0;
+#X obj 15 90 cnv 15 900 40 empty \$0-description DESCRIPTION 20 20
+0 14 -1 -262144 0;
+#X obj 15 235 cnv 15 420 40 empty \$0-inlets INLETS 25 20 0 14 -1 -262144
+0;
+#X obj 496 235 cnv 15 420 40 empty \$0-outlets OUTLETS 25 20 0 14 -1
+-262144 0;
+#X obj 15 605 cnv 15 900 40 empty \$0-args ARGS 20 20 0 14 -1 -262144
+0;
+#X obj 15 735 cnv 15 900 40 empty \$0-see SEE 20 20 0 14 -1 -262144
+0;
+#X text 20 55 Outputs lists of n elements;
+#X text 90 140 Outputs lists of n elements. It accepts a list and returns sublists of n elements successively. If argument is 1 \, it works just like [vs.iter].;
+#X obj 50 290 cnv 15 60 15 empty empty 0 10 8 0 14 -128992 -262144
+0;
+#X obj 115 290 cnv 15 80 15 empty empty list 5 8 0 12 -262144 -1
+0;
+#X text 200 287 list of atoms, f 37;
+#X obj 50 333 cnv 15 60 15 empty empty 1 10 8 0 14 -128992 -262144
+0;
+#X obj 115 333 cnv 15 80 15 empty empty int 5 8 0 12 -262144 -1
+0;
+#X text 200 330 set size of sublist to return, f 37;
+#X obj 530 290 cnv 15 60 15 empty empty 0 10 8 0 14 -128992 -262144
+0;
+#X obj 595 290 cnv 15 80 15 empty empty list 5 8 0 12 -262144 -1
+0;
+#X text 680 287 sublist of size defined by right inlet, f 37;
+#X text 90 650 (1) n;
+#X text 90 665 (2) r;
+#X text 90 680 (3)  ;
+#X text 90 695 (4) o;
+#X text 90 710 (5) f;
+#X text 90 725 (6)  ;
+#X text 90 740 (7) a;
+#X text 90 755 (8) t;
+#X text 90 770 (9) o;
+#X text 90 785 (10) m;
+#X text 90 800 (11) s;
+#X text 90 815 (12)  ;
+#X text 90 830 (13) [;
+#X text 90 845 (14) i;
+#X text 90 860 (15) n;
+#X text 90 875 (16) t;
+#X text 90 890 (17) ];
+#X obj 100 800 vs.niter-example;
+#X obj 300 800 pddp/pddplink vs.__objects_list__.pd -text VIRTUAL SOUND LIBRARY object list;
+#N canvas 1184 100 150 90 see_also 0;
+#X obj 10 10 vs.iter;
+#X obj 10 35 vs.listloop;
+#X obj 10 60 vs.listfunnel;
+#X restore 845 795 pd see_also;

@@ -1,0 +1,17 @@
+#N canvas 531 319 256 175 10;
+#X obj 15 15 inlet~ sig;
+#X obj 15 50 vs.argsig~ \$1;
+#X obj 15 93 phasor~;
+#X obj 180 51 loadbang;
+#X obj 180 76 vs.random;
+#X obj 105 15 inlet;
+#X obj 15 118 vs.bp.rand3~;
+#X obj 15 143 outlet~;
+#X text 101 135 f.bianchi - M.Giri;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 1;
+#X connect 5 0 2 1;
+#X connect 6 0 7 0;

@@ -1,0 +1,32 @@
+#N canvas 100 106 420 560 10;
+#X obj 54 233 vs.explist 10 10 1000 -2;
+#X obj 54 255 array set \$0-explist;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array \$0-explist 20 float 3;
+#A 0 10 415.149 654.501 795.906 879.444 928.797 957.953 975.178 985.354
+991.366 994.918 997.016 998.255 998.988 999.42 999.676 999.827 999.916
+999.969 1000;
+#X coords 0 1000 20 10 200 140 1 0 0;
+#X restore 204 273 graph;
+#X obj 54 66 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 72 66 trigs output;
+#X obj 77 116 array size \$0-explist;
+#X floatatom 72 92 5 0 0 0 - - -;
+#X obj 168 209 t b f;
+#X floatatom 168 189 5 0 0 1 curve - -;
+#X floatatom 101 141 5 0 0 1 min - -;
+#X floatatom 148 160 5 0 0 1 max - -;
+#X text 107 92 num of items;
+#X text 242 177 > 0: exponential;
+#X text 242 189 < 0: logaritmic;
+#X text 242 201 = 0: linear;
+#X connect 0 0 1 0;
+#X connect 3 0 0 0;
+#X connect 6 0 5 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 7 1 0 3;
+#X connect 8 0 7 0;
+#X connect 9 0 0 1;
+#X connect 10 0 0 2;

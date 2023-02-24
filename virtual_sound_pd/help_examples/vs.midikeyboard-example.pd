@@ -1,0 +1,41 @@
+#N canvas 100 106 420 560 10;
+#X obj 14 20 vs.midikeyboard;
+#X floatatom 14 129 5 0 0 0 - - -;
+#X text 50 130 MIDI note;
+#X floatatom 286 129 5 0 0 0 - - -;
+#X text 322 130 MIDI velocity;
+#X text 220 145 Higher position inside a key;
+#X text 220 158 outputs higher velocity values;
+#X text 14 190 mode 0 (mono): you can select one note at time;
+#X text 14 204 mode 1 (poly): you can select (and deselect) more notes
+at time;
+#X text 14 230 mode 2 (touch): you can drive the keyboard with the
+computer keyboard. When you press a key on your keyboard \, you select
+a key on [vs.midikeyboard] and when you release the key \, the key
+is released. Characters of first two lines of keybord (beginning from
+z and s) acts to generate the first octave \, while the third and fourth
+line are for second octave.;
+#X text 14 315 bkey (base key): offset added to every value.;
+#X text 14 334 bvel (base velocity): in touch mode (mode 2) you cannot
+generate velocity interactivly \, so you can set bvel parameter to
+have a fixed velocity value for every note.;
+#N canvas 541 135 450 300 messages 0;
+#X obj 25 117 vs.midikeyboard;
+#X msg 25 89 basekey \$1;
+#X floatatom 25 65 5 0 0 0 - - -;
+#X floatatom 105 65 5 0 0 0 - - -;
+#X msg 105 89 basevel \$1;
+#X floatatom 185 65 5 0 2 0 - - -;
+#X msg 185 89 mode \$1;
+#X msg 251 93 48 64 0;
+#X text 248 75 list: basekey \, basevel \, mode;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X restore 158 391 pd messages;
+#X connect 0 0 1 0;
+#X connect 0 1 3 0;

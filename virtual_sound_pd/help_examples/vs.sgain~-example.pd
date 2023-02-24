@@ -1,0 +1,21 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.sgain~;
+#X obj 115 73 osc~ 440;
+#X obj 125 103 osc~ 441;
+#X obj 115 322 dac~;
+#X floatatom 135 131 5 0 0 0 - - -;
+#X floatatom 146 161 5 0 0 0 - - -;
+#X text 184 162 amp value (0-1);
+#X text 173 132 db value (-inf \, +6);
+#X floatatom 146 348 5 0 0 0 - - -;
+#X text 145 363 output db value \,;
+#X text 82 377 possibly to drive another [vs.gain~] or [vs.sgain~]
+;
+#X obj 16 45 vs.dspturn;
+#X connect 0 0 3 0;
+#X connect 0 1 3 1;
+#X connect 0 2 8 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 4 0 0 2;
+#X connect 5 0 0 3;

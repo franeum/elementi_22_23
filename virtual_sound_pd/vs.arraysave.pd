@@ -1,0 +1,18 @@
+#N canvas 442 144 362 168 10;
+#X obj 15 97 array set \$1;
+#X obj 140 44 t b f;
+#X obj 15 19 inlet recall;
+#X obj 140 19 inlet store;
+#X obj 255 19 inlet save;
+#X obj 255 98 text define \$2;
+#X obj 15 72 text get \$2;
+#X obj 140 71 array get \$1;
+#X obj 140 98 text set \$2;
+#X text 291 135 f.bianchi;
+#X connect 1 0 7 0;
+#X connect 1 1 8 1;
+#X connect 2 0 6 0;
+#X connect 3 0 1 0;
+#X connect 4 0 5 0;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;

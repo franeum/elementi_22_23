@@ -1,0 +1,11 @@
+#N canvas 201 249 199 178 10;
+#X obj 52 46 inlet~;
+#X obj 31 97 pow~;
+#X obj 31 21 sig~ 10;
+#X obj 52 74 /~ 20;
+#X obj 31 122 outlet~;
+#X text 102 156 f.bianchi;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 1;

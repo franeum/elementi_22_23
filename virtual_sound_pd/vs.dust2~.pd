@@ -1,0 +1,13 @@
+#N canvas 535 278 220 196 10;
+#X obj 12 128 *~;
+#X obj 162 111 noise~;
+#X obj 12 153 outlet~;
+#X obj 12 14 inlet~;
+#X obj 12 83 vs.randclick~;
+#X obj 12 39 vs.argsig~ \$1;
+#X text 78 163 f.bianchi - M.Giri;
+#X connect 0 0 2 0;
+#X connect 1 0 0 1;
+#X connect 3 0 5 0;
+#X connect 4 0 0 0;
+#X connect 5 0 4 0;

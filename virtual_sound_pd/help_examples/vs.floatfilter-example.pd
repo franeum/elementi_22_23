@@ -1,0 +1,6 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.floatfilter;
+#X obj 115 232 print;
+#X msg 115 169 1 2 e f 4 t 5;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;

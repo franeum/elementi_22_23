@@ -1,0 +1,71 @@
+#N canvas 200 100 970 850 12;
+#X declare -path help_examples;
+#X obj 100 20 declare -path help_examples;
+#X obj 15 15 cnv 15 940 60 empty empty vs.scale 20 20 0 36 -233017 -66577
+
+0;
+#X obj 75 105 cnv 15 880 140 empty \$0-canvas-description empty 20
+12 0 14 -233017 -66577 0;
+#X obj 555 255 cnv 15 400 360 empty \$0-canvas-outlets empty 20 12
+0 14 -233017 -66577 0;
+#X obj 75 255 cnv 15 400 360 empty \$0-canvas-inlets empty 20 12 0
+14 -233017 -66577 0;
+#X obj 75 625 cnv 15 880 120 empty \$0-canvas-args empty 20 12 0 14
+-233017 -66577 0;
+#X obj 75 755 cnv 15 880 80 empty \$0-canvas-see empty 20 12 0 14 -233017
+-66577 0;
+#X obj 15 90 cnv 15 900 40 empty \$0-description DESCRIPTION 20 20
+0 14 -1 -262144 0;
+#X obj 15 235 cnv 15 420 40 empty \$0-inlets INLETS 25 20 0 14 -1 -262144
+0;
+#X obj 496 235 cnv 15 420 40 empty \$0-outlets OUTLETS 25 20 0 14 -1
+-262144 0;
+#X obj 15 605 cnv 15 900 40 empty \$0-args ARGS 20 20 0 14 -1 -262144
+0;
+#X obj 15 735 cnv 15 900 40 empty \$0-see SEE 20 20 0 14 -1 -262144
+0;
+#X text 20 55 Maps values to an output range;
+#X text 90 140 Maps values to an output range. Scaling factor determines linear distribution when it is equal to zero \, logarithmical when it's lower than zero and exponential when it's greater than zero.;
+#X obj 50 290 cnv 15 60 15 empty empty 0 10 8 0 14 -128992 -262144
+0;
+#X obj 115 290 cnv 15 80 15 empty empty float 5 8 0 12 -262144 -1
+0;
+#X text 200 287 min input value, f 37;
+#X obj 50 333 cnv 15 60 15 empty empty 1 10 8 0 14 -128992 -262144
+0;
+#X obj 115 333 cnv 15 80 15 empty empty float 5 8 0 12 -262144 -1
+0;
+#X text 200 330 max input value, f 37;
+#X obj 50 376 cnv 15 60 15 empty empty 2 10 8 0 14 -128992 -262144
+0;
+#X obj 115 376 cnv 15 80 15 empty empty float 5 8 0 12 -262144 -1
+0;
+#X text 200 373 min output value, f 37;
+#X obj 50 419 cnv 15 60 15 empty empty 3 10 8 0 14 -128992 -262144
+0;
+#X obj 115 419 cnv 15 80 15 empty empty float 5 8 0 12 -262144 -1
+0;
+#X text 200 416 max output value, f 37;
+#X obj 50 462 cnv 15 60 15 empty empty 4 10 8 0 14 -128992 -262144
+0;
+#X obj 115 462 cnv 15 80 15 empty empty float 5 8 0 12 -262144 -1
+0;
+#X text 200 459 curve factor, f 37;
+#X obj 530 290 cnv 15 60 15 empty empty 0 10 8 0 14 -128992 -262144
+0;
+#X obj 595 290 cnv 15 80 15 empty empty float 5 8 0 12 -262144 -1
+0;
+#X text 680 287 mapped value, f 37;
+#X text 90 650 (1) in min [float];
+#X text 90 665 (2) in max [float];
+#X text 90 680 (3) out min [float];
+#X text 90 695 (4) out max [float];
+#X text 90 710 (5) curve factor [float];
+#X obj 100 800 vs.scale-example;
+#X obj 300 800 pddp/pddplink vs.__objects_list__.pd -text VIRTUAL SOUND LIBRARY object list;
+#N canvas 1184 100 150 120 see_also 0;
+#X obj 10 10 vs.scale;
+#X obj 10 35 vs.scale~;
+#X obj 10 60 vs.kscale~;
+#X obj 10 85 vs.kcurvescale~;
+#X restore 845 795 pd see_also;

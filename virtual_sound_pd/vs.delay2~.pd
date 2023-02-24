@@ -1,0 +1,9 @@
+#N canvas 226 365 183 170 10;
+#X obj 19 18 inlet~;
+#X obj 19 51 rzero_rev~ 0;
+#X obj 19 113 outlet~;
+#X obj 19 80 rzero_rev~ 0;
+#X text 107 137 f.bianchi;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;

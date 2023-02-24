@@ -1,0 +1,12 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 222 vs.pset;
+#X msg 115 244 b c d e a;
+#X msg 115 124 a b c d e;
+#X floatatom 184 165 5 0 0 0 - - -;
+#X obj 115 200 vs.rotate -1;
+#X text 217 177 (also negative);
+#X text 218 163 how many place to rotate;
+#X connect 0 0 1 0;
+#X connect 2 0 4 0;
+#X connect 3 0 4 1;
+#X connect 4 0 0 0;

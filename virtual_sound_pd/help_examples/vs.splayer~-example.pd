@@ -1,0 +1,56 @@
+#N canvas 100 106 420 560 10;
+#X obj 125 347 vs.sgain~;
+#X obj 125 469 dac~;
+#X obj 125 315 vs.splayer~ drums.aif;
+#X obj 30 206 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 186 296 5 0 0 0 - - -;
+#X floatatom 320 301 5 0 0 0 - - -;
+#X text 183 281 loop start (ms);
+#X text 306 285 loop end (ms);
+#X msg 125 109 loop \$1;
+#X obj 125 87 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 136 139 5 0 0 0 - - -;
+#X msg 136 158 speed \$1;
+#X msg 155 182 open;
+#X msg 31 258 stop;
+#X text 47 205 play;
+#X text 143 89 loop on/off;
+#X text 193 151 speed of playback;
+#X text 193 164 (negative also);
+#X text 247 214 define portion to playback;
+#X msg 185 236 replace;
+#X msg 168 213 frag 0 44100;
+#N canvas 0 22 378 228 notes 0;
+#X text 12 15 replace: open a file \, put it into an array and resize
+it.;
+#X text 12 45 open: open a file \, put it into an array \, but don't
+resize it.;
+#X text 12 85 frag: accept one or two values. If only one \, [vs.splayer~]
+play from this value and go along whole file. If a second value is
+present \, [vs.splayer~] plays the file from the first to the second
+value. Both value are expressed in milliseconds.;
+#X text 12 165 speed: determine the speed of playback. If value is
+negative \, playback is in reverse mode.;
+#X restore 262 405 pd notes;
+#X msg 187 258 replace zdrums.aif;
+#X msg 189 182 open zvoicehead.wav;
+#X obj 16 22 vs.dspturn;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 2 0 0 0;
+#X connect 2 1 0 1;
+#X connect 3 0 2 0;
+#X connect 4 0 2 1;
+#X connect 5 0 2 2;
+#X connect 8 0 2 0;
+#X connect 9 0 8 0;
+#X connect 10 0 11 0;
+#X connect 11 0 2 0;
+#X connect 12 0 2 0;
+#X connect 13 0 2 0;
+#X connect 19 0 2 0;
+#X connect 20 0 2 0;
+#X connect 22 0 2 0;
+#X connect 23 0 2 0;

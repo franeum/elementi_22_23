@@ -391,6 +391,8 @@ I message box possono contenere variabili, che si denotano con il prefisso `$` s
 1. Implementa un algoritmo che abbia, in entrata, un valore (variabile tramite number box) compreso fra 0 e 127 e in uscita lo riscali fra 200 e 2000
 2. Genera un valore casuale compreso fra 0 e 100, se è minore di 50 lascialo passare inalterato, altrimenti moltiplicalo * 100.
 
+---
+
 ## segnali audio
 
 ---

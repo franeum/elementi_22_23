@@ -1,0 +1,13 @@
+#N canvas 220 255 190 149 10;
+#X obj 76 12 loadbang;
+#X obj 76 37 samplerate~;
+#X obj 76 62 / 1000;
+#X obj 11 37 inlet~ ms;
+#X obj 11 79 *~;
+#X obj 11 101 outlet~ samps;
+#X text 116 122 f.bianchi;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;

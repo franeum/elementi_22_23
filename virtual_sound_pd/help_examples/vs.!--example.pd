@@ -1,0 +1,12 @@
+#N canvas 100 138 279 278 10;
+#X obj 60 144 vs.!- 1;
+#X floatatom 60 56 5 0 0 0 - - -;
+#X floatatom 60 186 5 0 0 0 - - -;
+#X floatatom 99 106 5 0 0 0 - - -;
+#X text 133 106 change minuend;
+#X text 93 49 change subtrahend;
+#X text 93 61 and perform subtraction;
+#X text 94 186 difference;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 1;

@@ -1,0 +1,18 @@
+#N canvas 376 232 161 185 10;
+#X obj 35 66 vs.iter;
+#X obj 16 121 list;
+#X obj 35 93 list;
+#X obj 16 14 inlet;
+#X obj 16 146 outlet;
+#X obj 16 39 t b a b;
+#X obj 83 95 t a;
+#X text 86 156 f.bianchi;
+#X connect 0 0 2 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 1;
+#X connect 2 0 6 0;
+#X connect 3 0 5 0;
+#X connect 5 0 1 0;
+#X connect 5 1 0 0;
+#X connect 5 2 2 1;
+#X connect 6 0 2 1;

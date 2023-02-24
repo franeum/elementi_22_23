@@ -1,0 +1,8 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.mthless 0;
+#X obj 115 222 print;
+#X msg 115 145 1 2 3 b 5;
+#X floatatom 184 174 5 0 0 1 index - -;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;

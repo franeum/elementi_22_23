@@ -1,0 +1,12 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 100 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 133 100 open a browser to choose a file;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array \$0-soundfile 88216 float 0;
+#X coords 0 1 88215 -1 200 140 1;
+#X restore 113 255 graph;
+#X obj 115 200 vs.file2array \$0-soundfile;
+#X msg 131 157 zdrums.aif;
+#X connect 0 0 3 0;
+#X connect 4 0 3 0;

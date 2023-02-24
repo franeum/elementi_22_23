@@ -1,0 +1,73 @@
+#N canvas 540 0 530 500 18;
+#X obj 10 25 cnv 15 160 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 10 30 pddp/helplink vs.bandpass~;
+#X obj 10 60 cnv 15 160 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 65 pddp/helplink vs.biquad~;
+#X obj 10 95 cnv 15 160 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 10 100 pddp/helplink vs.butterbpbw~;
+#X obj 10 130 cnv 15 160 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 135 pddp/helplink vs.butterbp~;
+#X obj 10 165 cnv 15 160 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 10 170 pddp/helplink vs.butterbrbw~;
+#X obj 10 200 cnv 15 160 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 205 pddp/helplink vs.butterbr~;
+#X obj 10 235 cnv 15 160 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 10 240 pddp/helplink vs.butterhp~;
+#X obj 10 270 cnv 15 160 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 275 pddp/helplink vs.butterlp~;
+#X obj 10 305 cnv 15 160 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 10 310 pddp/helplink vs.delay1~;
+#X obj 10 340 cnv 15 160 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 345 pddp/helplink vs.delay2~;
+#X obj 10 375 cnv 15 160 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 10 380 pddp/helplink vs.filterbank~;
+#X obj 10 410 cnv 15 160 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 415 pddp/helplink vs.highpass~;
+#X obj 170 25 cnv 15 160 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 170 30 pddp/helplink vs.hip~;
+#X obj 170 60 cnv 15 160 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 170 65 pddp/helplink vs.kbandpass~;
+#X obj 170 95 cnv 15 160 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 170 100 pddp/helplink vs.khighpass~;
+#X obj 170 130 cnv 15 160 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 170 135 pddp/helplink vs.khighshelf~;
+#X obj 170 165 cnv 15 160 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 170 170 pddp/helplink vs.klowpass~;
+#X obj 170 200 cnv 15 160 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 170 205 pddp/helplink vs.klowshelf~;
+#X obj 170 235 cnv 15 160 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 170 240 pddp/helplink vs.kpeaknotch~;
+#X obj 170 270 cnv 15 160 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 170 275 pddp/helplink vs.kreson~;
+#X obj 170 305 cnv 15 160 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 170 310 pddp/helplink vs.lop~;
+#X obj 170 340 cnv 15 160 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 170 345 pddp/helplink vs.lowpass~;
+#X obj 170 375 cnv 15 160 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 170 380 pddp/helplink vs.reson~;
+#X obj 170 410 cnv 15 160 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 170 415 pddp/helplink vs.vcf~;

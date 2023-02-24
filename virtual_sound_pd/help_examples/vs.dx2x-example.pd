@@ -1,0 +1,16 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 240 vs.dx2x 10;
+#X obj 115 81 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 172 187 1 2 3 -3 4 -5 2 1;
+#X text 284 188 differences list;
+#X text 188 241 default arg: 0;
+#X text 135 81 trigs output;
+#X obj 115 282 print;
+#X floatatom 135 123 5 0 0 0 - - -;
+#X text 172 117 float: sets starting value;
+#X text 172 129 and trigs output;
+#X connect 0 0 6 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 7 0 0 0;

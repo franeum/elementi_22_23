@@ -1,0 +1,17 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 220 vs.series 10 3 -1;
+#X obj 115 242 print;
+#X obj 86 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 181 170 5 0 0 1 start - -;
+#X floatatom 214 200 5 0 0 1 step - -;
+#X floatatom 148 140 5 0 0 1 - - -;
+#X floatatom 115 110 5 0 0 0 - - -;
+#X text 151 109 set number of items and output series;
+#X text 183 141 number of items;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 2;
+#X connect 4 0 0 3;
+#X connect 5 0 0 1;
+#X connect 6 0 0 0;

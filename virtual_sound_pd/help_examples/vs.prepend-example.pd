@@ -1,0 +1,8 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 222 print;
+#X obj 115 200 vs.prepend ciao;
+#X msg 115 170 a tutti;
+#X msg 202 170 ciao ciao;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 1;

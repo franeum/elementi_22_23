@@ -1,0 +1,7 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.choose;
+#X floatatom 115 242 5 0 0 0 - - -;
+#X msg 115 154 1 2 3 4 5;
+#X text 182 155 click repeatedly;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;

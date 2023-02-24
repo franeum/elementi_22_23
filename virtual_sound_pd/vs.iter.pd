@@ -1,0 +1,16 @@
+#N canvas 487 174 254 194 10;
+#X obj 17 11 inlet;
+#X obj 17 72 list length;
+#X obj 50 130 vs.lookup;
+#X obj 17 38 t a a;
+#X obj 17 106 vs.uzi;
+#X obj 50 158 outlet;
+#X obj 104 158 outlet;
+#X text 167 163 f.bianchi;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 1 0;
+#X connect 3 1 2 1;
+#X connect 4 1 6 0;
+#X connect 4 2 2 0;

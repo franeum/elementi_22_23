@@ -1,0 +1,17 @@
+#N canvas 258 300 235 193 10;
+#X obj 21 138 cos~;
+#X obj 21 113 wrap~;
+#X obj 21 88 +~, f 9;
+#X obj 21 18 inlet~;
+#X obj 72 18 inlet~;
+#X obj 21 163 outlet~;
+#X obj 21 63 phasor~;
+#X obj 21 40 vs.argsig~ \$1;
+#X text 154 159 f.bianchi;
+#X connect 0 0 5 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 7 0;
+#X connect 4 0 2 1;
+#X connect 6 0 2 0;
+#X connect 7 0 6 0;

@@ -1,0 +1,54 @@
+#N canvas 200 100 970 850 12;
+#X declare -path help_examples;
+#X obj 100 20 declare -path help_examples;
+#X obj 15 15 cnv 15 940 60 empty empty vs.pak 20 20 0 36 -233017 -66577
+
+0;
+#X obj 75 105 cnv 15 880 140 empty \$0-canvas-description empty 20
+12 0 14 -233017 -66577 0;
+#X obj 555 255 cnv 15 400 360 empty \$0-canvas-outlets empty 20 12
+0 14 -233017 -66577 0;
+#X obj 75 255 cnv 15 400 360 empty \$0-canvas-inlets empty 20 12 0
+14 -233017 -66577 0;
+#X obj 75 625 cnv 15 880 120 empty \$0-canvas-args empty 20 12 0 14
+-233017 -66577 0;
+#X obj 75 755 cnv 15 880 80 empty \$0-canvas-see empty 20 12 0 14 -233017
+-66577 0;
+#X obj 15 90 cnv 15 900 40 empty \$0-description DESCRIPTION 20 20
+0 14 -1 -262144 0;
+#X obj 15 235 cnv 15 420 40 empty \$0-inlets INLETS 25 20 0 14 -1 -262144
+0;
+#X obj 496 235 cnv 15 420 40 empty \$0-outlets OUTLETS 25 20 0 14 -1
+-262144 0;
+#X obj 15 605 cnv 15 900 40 empty \$0-args ARGS 20 20 0 14 -1 -262144
+0;
+#X obj 15 735 cnv 15 900 40 empty \$0-see SEE 20 20 0 14 -1 -262144
+0;
+#X text 20 55 Outputs a list when any element changes;
+#X text 90 140 The pak object offers much of the functionality of pack \, but outputs the entire list whenever input is received in any inlet;
+#X obj 50 290 cnv 15 60 15 empty empty 0 10 8 0 14 -128992 -262144
+0;
+#X obj 115 290 cnv 15 80 15 empty empty float 5 8 0 12 -262144 -1
+0;
+#X text 200 287 leftmost value, f 37;
+#X obj 50 333 cnv 15 60 15 empty empty 1 10 8 0 14 -128992 -262144
+0;
+#X obj 115 333 cnv 15 80 15 empty empty float 5 8 0 12 -262144 -1
+0;
+#X text 200 330 righmost value, f 37;
+#X obj 530 290 cnv 15 60 15 empty empty 0 10 8 0 14 -128992 -262144
+0;
+#X obj 595 290 cnv 15 80 15 empty empty list[float] 5 8 0 12 -262144 -1
+0;
+#X text 680 287 list of 'packed' values, f 37;
+#X text 90 650 (1) inizialized two atoms list[float];
+#X obj 100 800 vs.pak-example;
+#X obj 300 800 pddp/pddplink vs.__objects_list__.pd -text VIRTUAL SOUND LIBRARY object list;
+#N canvas 1184 100 150 180 see_also 0;
+#X obj 10 10 vs.pak;
+#X obj 10 35 vs.pak3;
+#X obj 10 60 vs.pak4;
+#X obj 10 85 pack;
+#X obj 10 110 unpack;
+#X obj 10 135 list;
+#X restore 845 795 pd see_also;

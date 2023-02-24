@@ -1,0 +1,16 @@
+#N canvas 100 106 420 560 10;
+#X floatatom 105 136 5 0 0 0 - - -;
+#X floatatom 210 177 5 0 0 0 - - -;
+#X text 244 177 duty cycle (0-1) (float);
+#X text 139 137 frequency (signal/float);
+#X obj 159 251 vs.scope~;
+#X obj 105 242 vs.gain~;
+#X obj 105 354 dac~;
+#X obj 105 200 vs.square~ 800 0.5;
+#X obj 16 45 vs.dspturn;
+#X connect 0 0 7 0;
+#X connect 1 0 7 1;
+#X connect 5 0 6 0;
+#X connect 5 0 6 1;
+#X connect 7 0 4 0;
+#X connect 7 0 5 0;

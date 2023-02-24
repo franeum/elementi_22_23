@@ -1,0 +1,9 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.decide;
+#X obj 115 140 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 115 242 5 0 0 0 - - -;
+#X msg 138 173 seed 1972;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 0;

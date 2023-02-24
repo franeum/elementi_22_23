@@ -1,0 +1,89 @@
+#N canvas 100 106 420 560 10;
+#X obj 20 235 vs.delta;
+#X obj 65 206 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 86 206 reset delta;
+#X obj 20 101 metro 100;
+#X obj 20 77 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 20 128 vs.drunk 100 5;
+#N canvas 632 159 450 300 graph1 0;
+#X obj 66 120 list;
+#X obj 20 180 list;
+#X obj 66 148 list split 199;
+#X obj 220 20 loadbang;
+#X obj 185 157 s \$0-drunken;
+#X msg 185 131 const 0;
+#X obj 20 26 inlet;
+#X obj 20 202 array set \$0-drunken;
+#X msg 250 131 ylabel -1 0 20 40 60 80 100;
+#X msg 250 105 yticks 0 20 10;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 1 0 7 0;
+#X connect 2 0 1 1;
+#X connect 2 2 1 1;
+#X connect 3 0 1 1;
+#X connect 3 0 5 0;
+#X connect 3 0 9 0;
+#X connect 3 0 8 0;
+#X connect 5 0 4 0;
+#X connect 6 0 1 0;
+#X connect 8 0 4 0;
+#X connect 9 0 4 0;
+#X restore 40 150 pd graph1;
+#N canvas 428 111 510 294 graph2 0;
+#X obj 66 120 list;
+#X obj 20 180 list;
+#X obj 66 148 list split 199;
+#X obj 227 46 loadbang;
+#X obj 20 26 inlet;
+#X obj 185 207 s \$0-delta;
+#X obj 20 202 array set \$0-delta;
+#X msg 185 131 const 0;
+#X msg 252 131 ylabel -1 -20 -10 0 10 20;
+#X msg 253 156 yticks 0 10 10;
+#X obj 20 48 clip -25 25;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 1 0 6 0;
+#X connect 2 0 1 1;
+#X connect 2 2 1 1;
+#X connect 3 0 1 1;
+#X connect 3 0 7 0;
+#X connect 3 0 8 0;
+#X connect 3 0 9 0;
+#X connect 4 0 10 0;
+#X connect 7 0 5 0;
+#X connect 8 0 5 0;
+#X connect 9 0 5 0;
+#X connect 10 0 1 0;
+#X restore 44 262 pd graph2;
+#X floatatom 20 297 5 0 0 0 - - -;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array \$0-drunken 200 float 1;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 100 199 0 200 140 1 0 0;
+#X restore 193 71 graph;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array \$0-delta 200 float 1;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 25 199 -25 200 140 1 0 0;
+#X restore 193 238 graph;
+#X connect 0 0 7 0;
+#X connect 0 0 8 0;
+#X connect 1 0 0 1;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 5 0 0 0;

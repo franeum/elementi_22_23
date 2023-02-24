@@ -1,0 +1,6 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.pset;
+#X floatatom 115 168 5 0 0 0 - - -;
+#X msg 115 232 19;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;

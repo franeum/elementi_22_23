@@ -1,0 +1,88 @@
+#N canvas 200 100 970 850 12;
+#X declare -path help_examples;
+#X obj 100 20 declare -path help_examples;
+#X obj 15 15 cnv 15 940 60 empty empty vs.switch3 20 20 0 36 -233017 -66577
+
+0;
+#X obj 75 105 cnv 15 880 140 empty \$0-canvas-description empty 20
+12 0 14 -233017 -66577 0;
+#X obj 555 255 cnv 15 400 360 empty \$0-canvas-outlets empty 20 12
+0 14 -233017 -66577 0;
+#X obj 75 255 cnv 15 400 360 empty \$0-canvas-inlets empty 20 12 0
+14 -233017 -66577 0;
+#X obj 75 625 cnv 15 880 120 empty \$0-canvas-args empty 20 12 0 14
+-233017 -66577 0;
+#X obj 75 755 cnv 15 880 80 empty \$0-canvas-see empty 20 12 0 14 -233017
+-66577 0;
+#X obj 15 90 cnv 15 900 40 empty \$0-description DESCRIPTION 20 20
+0 14 -1 -262144 0;
+#X obj 15 235 cnv 15 420 40 empty \$0-inlets INLETS 25 20 0 14 -1 -262144
+0;
+#X obj 496 235 cnv 15 420 40 empty \$0-outlets OUTLETS 25 20 0 14 -1
+-262144 0;
+#X obj 15 605 cnv 15 900 40 empty \$0-args ARGS 20 20 0 14 -1 -262144
+0;
+#X obj 15 735 cnv 15 900 40 empty \$0-see SEE 20 20 0 14 -1 -262144
+0;
+#X text 20 55 Accepts messages from a specific inlet;
+#X text 90 140 Accepts messages from a specific inlet. It exists in three forms: [vs.switch] (2 inlets) \, [vs.switch3] (3 inlets) and [vs.switch4] (4 inlets).;
+#X obj 50 290 cnv 15 60 15 empty empty 0 10 8 0 14 -128992 -262144
+0;
+#X obj 115 290 cnv 15 80 15 empty empty float 5 8 0 12 -262144 -1
+0;
+#X text 200 287 index of selected inlet to open, f 37;
+#X obj 50 333 cnv 15 60 15 empty empty 1 10 8 0 14 -128992 -262144
+0;
+#X obj 115 333 cnv 15 80 15 empty empty atom 5 8 0 12 -262144 -1
+0;
+#X text 200 330 atom to pass, f 37;
+#X obj 115 366 cnv 15 80 15 empty empty list 5 8 0 12 -262144 -1
+0;
+#X text 200 363 list to pass, f 37;
+#X obj 50 409 cnv 15 60 15 empty empty 2 10 8 0 14 -128992 -262144
+0;
+#X obj 115 409 cnv 15 80 15 empty empty atom 5 8 0 12 -262144 -1
+0;
+#X text 200 406 atom to pass, f 37;
+#X obj 115 442 cnv 15 80 15 empty empty list 5 8 0 12 -262144 -1
+0;
+#X text 200 439 list to pass, f 37;
+#X obj 50 485 cnv 15 60 15 empty empty 3 10 8 0 14 -128992 -262144
+0;
+#X obj 115 485 cnv 15 80 15 empty empty atom 5 8 0 12 -262144 -1
+0;
+#X text 200 482 atom to pass, f 37;
+#X obj 115 518 cnv 15 80 15 empty empty list 5 8 0 12 -262144 -1
+0;
+#X text 200 515 list to pass, f 37;
+#X obj 530 290 cnv 15 60 15 empty empty 0 10 8 0 14 -128992 -262144
+0;
+#X obj 595 290 cnv 15 80 15 empty empty atom 5 8 0 12 -262144 -1
+0;
+#X text 680 287 atom passed, f 37;
+#X obj 595 323 cnv 15 80 15 empty empty list 5 8 0 12 -262144 -1
+0;
+#X text 680 320 list passed, f 37;
+#X obj 530 366 cnv 15 60 15 empty empty 1 10 8 0 14 -128992 -262144
+0;
+#X obj 595 366 cnv 15 80 15 empty empty int 5 8 0 12 -262144 -1
+0;
+#X text 680 363 index if index > 3 \, useful to control another analogous object, f 37;
+#X text 90 650 None;
+#X obj 100 800 vs.switch-example;
+#X obj 300 800 pddp/pddplink vs.__objects_list__.pd -text VIRTUAL SOUND LIBRARY object list;
+#N canvas 1184 100 150 390 see_also 0;
+#X obj 10 10 vs.gate~;
+#X obj 10 35 vs.gate3~;
+#X obj 10 60 vs.gate4~;
+#X obj 10 85 vs.sel~;
+#X obj 10 110 vs.sel3~;
+#X obj 10 135 vs.sel4~;
+#X obj 10 160 vs.gate;
+#X obj 10 185 vs.gate3;
+#X obj 10 210 vs.gate4;
+#X obj 10 235 vs.switch;
+#X obj 10 260 vs.switch3;
+#X obj 10 285 vs.switch4;
+#X obj 10 310 spigot;
+#X restore 845 795 pd see_also;

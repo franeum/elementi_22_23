@@ -1,0 +1,8 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.sum;
+#X floatatom 115 232 5 0 0 0 - - -;
+#X msg 152 164 1 2 b 3;
+#X msg 115 136 2 4 6 8 10;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;

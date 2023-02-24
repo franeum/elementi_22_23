@@ -1,0 +1,155 @@
+#N canvas 100 106 420 560 10;
+#N canvas 295 183 388 171 composite 0;
+#X obj 30 103 vs.gate;
+#X floatatom 30 58 5 0 0 0 - - -;
+#X obj 315 46 metro 100;
+#X obj 315 22 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 30 132 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 49 132 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 270 103 vs.gate3;
+#X obj 270 132 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 290 132 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 310 132 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 21 28 sel out;
+#X text 21 41 (1 to 5);
+#X text 69 121 ^ index to drive [vs.gate3];
+#X connect 0 0 4 0;
+#X connect 0 1 5 0;
+#X connect 0 2 6 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 2 0 6 1;
+#X connect 3 0 2 0;
+#X connect 6 0 7 0;
+#X connect 6 1 8 0;
+#X connect 6 2 9 0;
+#X restore 232 324 pd composite;
+#N canvas 0 22 244 265 composite2 0;
+#X obj 13 206 vs.gate;
+#X obj 135 67 metro 100;
+#X obj 93 17 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 13 235 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 32 235 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 73 206 vs.gate3;
+#X obj 73 235 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 92 235 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 111 235 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 139 206 vs.gate4, f 14;
+#X obj 139 235 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 159 235 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 179 235 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 199 235 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 13 70 metro 1000;
+#X obj 13 102 f;
+#X obj 49 103 + 1;
+#X obj 13 124 % 9;
+#X obj 13 146 + 1;
+#X obj 93 55 t b;
+#X obj 93 77 f 0;
+#X obj 13 169 nbx 2 20 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 18
+-262144 -1 -1 0 256;
+#X connect 0 0 3 0;
+#X connect 0 1 4 0;
+#X connect 0 2 5 0;
+#X connect 1 0 0 1;
+#X connect 1 0 5 1;
+#X connect 1 0 9 1;
+#X connect 2 0 1 0;
+#X connect 2 0 14 0;
+#X connect 2 0 19 0;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
+#X connect 5 2 8 0;
+#X connect 5 3 9 0;
+#X connect 9 0 10 0;
+#X connect 9 1 11 0;
+#X connect 9 2 12 0;
+#X connect 9 3 13 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 15 0 17 0;
+#X connect 16 0 15 1;
+#X connect 17 0 18 0;
+#X connect 18 0 21 0;
+#X connect 19 0 20 0;
+#X connect 20 0 15 1;
+#X connect 21 0 0 0;
+#X restore 232 344 pd composite2;
+#X obj 23 109 vs.gate;
+#X obj 62 82 metro 100;
+#X obj 62 61 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 23 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 42 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 23 43 5 0 0 0 - - -;
+#X text 21 26 close outputs);
+#X obj 260 82 metro 100;
+#X obj 260 61 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 203 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 222 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 203 43 5 0 0 0 - - -;
+#X text 201 26 close outputs);
+#X obj 203 109 vs.gate3, f 10;
+#X obj 241 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 98 262 metro 100;
+#X obj 98 241 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 23 322 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 41 322 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 23 223 5 0 0 0 - - -;
+#X text 21 206 close outputs);
+#X obj 60 322 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 23 289 vs.gate4, f 13;
+#X obj 79 322 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 181 249 Rightmost outlet of [vs.gate] \,;
+#X text 181 262 [vs.gate3] and [vs.gate4] outputs;
+#X text 181 275 an index to drive another analogous;
+#X text 181 288 object. See subpatches below to see;
+#X text 181 301 how the system works.;
+#X text 21 13 sel out (1 or 2 \, <=0 or >2;
+#X text 201 13 sel out (1 to 3 \, <=0 or >3;
+#X text 21 193 sel out (1 to 4 \, <=0 or >3;
+#X connect 2 0 5 0;
+#X connect 2 1 6 0;
+#X connect 3 0 2 1;
+#X connect 4 0 3 0;
+#X connect 7 0 2 0;
+#X connect 9 0 15 1;
+#X connect 10 0 9 0;
+#X connect 13 0 15 0;
+#X connect 15 0 11 0;
+#X connect 15 1 12 0;
+#X connect 15 2 16 0;
+#X connect 17 0 24 1;
+#X connect 18 0 17 0;
+#X connect 21 0 24 0;
+#X connect 24 0 19 0;
+#X connect 24 1 20 0;
+#X connect 24 2 23 0;
+#X connect 24 3 25 0;

@@ -1,0 +1,6 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.iter;
+#X obj 115 222 print;
+#X msg 115 174 10 20 30 40 alpha 50;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;

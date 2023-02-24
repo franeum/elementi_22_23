@@ -1,0 +1,16 @@
+#N canvas 100 106 420 560 10;
+#X obj 75 200 vs.line;
+#X obj 75 222 print;
+#X msg 75 107 0 \, 1 1000;
+#X text 125 201 default args: 0 20;
+#X text 138 106 goes from 0 to 1 in 1 second;
+#X text 192 131 goes from 0 to 1 in 1 second;
+#X text 192 143 than come back to 1 in half second;
+#X msg 91 137 0 \, 1 1000 0 500;
+#X obj 114 257 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 134 258 bang when done;
+#X connect 0 0 1 0;
+#X connect 0 1 8 0;
+#X connect 2 0 0 0;
+#X connect 7 0 0 0;

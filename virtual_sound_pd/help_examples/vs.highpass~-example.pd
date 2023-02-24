@@ -1,0 +1,13 @@
+#N canvas 100 106 420 560 10;
+#X obj 38 88 noise~;
+#X obj 38 153 vs.spectroscope~ 1;
+#X obj 38 120 vs.highpass~ 2000 10;
+#X floatatom 96 60 5 0 0 0 - - -;
+#X text 130 58 cutoff freq (float/signal);
+#X floatatom 155 97 5 0 0 0 - - -;
+#X text 189 95 cutoff freq (float/signal);
+#X obj 16 35 vs.dspturn;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 1;
+#X connect 5 0 2 2;

@@ -1,0 +1,18 @@
+#N canvas 75 153 182 210 10;
+#X obj 16 48 t l l;
+#X obj 73 65 list length;
+#X obj 16 115 list split;
+#X obj 16 9 inlet;
+#X obj 73 90 - \$1;
+#X obj 94 9 inlet;
+#X obj 16 140 outlet;
+#X obj 71 140 outlet;
+#X text 105 180 f.bianchi;
+#X connect 0 0 2 0;
+#X connect 0 1 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 6 0;
+#X connect 2 1 7 0;
+#X connect 3 0 0 0;
+#X connect 4 0 2 1;
+#X connect 5 0 4 1;

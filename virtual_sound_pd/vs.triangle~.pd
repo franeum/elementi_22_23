@@ -1,0 +1,26 @@
+#N canvas 244 159 487 267 10;
+#X obj 40 159 expr~ if ($v1 <= $f2 \, $v1 / $f2 \, (1 - $v1) / (1.
+- $f2));
+#X obj 40 184 *~ 2;
+#X obj 40 209 -~ 1;
+#X obj 40 135 phasor~;
+#X obj 40 70 inlet~;
+#X obj 311 55 inlet;
+#X obj 373 57 loadbang;
+#X obj 40 234 outlet~;
+#X obj 373 105 vs.defaulter 0.5;
+#X obj 373 137 clip 0.001 0.999;
+#X obj 40 92 vs.argsig~ \$1;
+#X obj 373 83 f \$2;
+#X text 398 235 f.bianchi;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 7 0;
+#X connect 3 0 0 0;
+#X connect 4 0 10 0;
+#X connect 5 0 9 0;
+#X connect 6 0 11 0;
+#X connect 8 0 9 0;
+#X connect 9 0 0 1;
+#X connect 10 0 3 0;
+#X connect 11 0 8 0;

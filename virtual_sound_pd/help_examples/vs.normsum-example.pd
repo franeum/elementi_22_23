@@ -1,0 +1,6 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.normsum;
+#X obj 115 222 print;
+#X msg 115 172 10 11 4 3 23 15 19;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;

@@ -1,0 +1,56 @@
+#N canvas 200 100 970 850 12;
+#X declare -path help_examples;
+#X obj 100 20 declare -path help_examples;
+#X obj 15 15 cnv 15 940 60 empty empty vs.spectroscope~ 20 20 0 36 -233017 -66577
+
+0;
+#X obj 75 105 cnv 15 880 140 empty \$0-canvas-description empty 20
+12 0 14 -233017 -66577 0;
+#X obj 555 255 cnv 15 400 360 empty \$0-canvas-outlets empty 20 12
+0 14 -233017 -66577 0;
+#X obj 75 255 cnv 15 400 360 empty \$0-canvas-inlets empty 20 12 0
+14 -233017 -66577 0;
+#X obj 75 625 cnv 15 880 120 empty \$0-canvas-args empty 20 12 0 14
+-233017 -66577 0;
+#X obj 75 755 cnv 15 880 80 empty \$0-canvas-see empty 20 12 0 14 -233017
+-66577 0;
+#X obj 15 90 cnv 15 900 40 empty \$0-description DESCRIPTION 20 20
+0 14 -1 -262144 0;
+#X obj 15 235 cnv 15 420 40 empty \$0-inlets INLETS 25 20 0 14 -1 -262144
+0;
+#X obj 496 235 cnv 15 420 40 empty \$0-outlets OUTLETS 25 20 0 14 -1
+-262144 0;
+#X obj 15 605 cnv 15 900 40 empty \$0-args ARGS 20 20 0 14 -1 -262144
+0;
+#X obj 15 735 cnv 15 900 40 empty \$0-see SEE 20 20 0 14 -1 -262144
+0;
+#X text 20 55 Signal spectroscope;
+#X text 90 140 spectroscope~ serves as a visual spectrogram or sonogram interface for the analysis of signals.;
+#X obj 50 290 cnv 15 60 15 empty empty 0 10 8 0 14 -128992 -262144
+0;
+#X obj 115 290 cnv 15 80 15 empty empty signal 5 8 0 12 -260097 -1
+0;
+#X text 200 287 source, f 37;
+#X obj 50 333 cnv 15 60 15 empty empty 1 10 8 0 14 -128992 -262144
+0;
+#X obj 115 333 cnv 15 80 15 empty empty plot 5 8 0 12 -262144 -1
+0;
+#X text 200 330 activeate (1) or deactivate (0) plotting, f 37;
+#X obj 115 366 cnv 15 80 15 empty empty logfreq 5 8 0 12 -262144 -1
+0;
+#X text 200 363 activeate (1) or deactivate (0) logarithmic representation, f 37;
+#X obj 115 399 cnv 15 80 15 empty empty xdim 5 8 0 12 -262144 -1
+0;
+#X text 200 396 set x axis dimension in pixels, f 37;
+#X obj 115 432 cnv 15 80 15 empty empty ydim 5 8 0 12 -262144 -1
+0;
+#X text 200 429 set y axis dimension in pixels, f 37;
+#X text 680 290 None, f 37;
+#X text 90 650 (1) linear (0) or logarithmic (1) visualization [int];
+#X text 90 665 (2) x dimension in pixels [int];
+#X text 90 680 (3) y dimension in pixels [int];
+#X obj 100 800 vs.spectroscope~-example;
+#X obj 300 800 pddp/pddplink vs.__objects_list__.pd -text VIRTUAL SOUND LIBRARY object list;
+#N canvas 1184 100 150 50 see_also 0;
+#X obj 10 10 vs.scope~;
+#X restore 845 795 pd see_also;

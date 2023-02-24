@@ -1,0 +1,14 @@
+#N canvas 100 106 420 560 10;
+#X msg 115 125 1 2 a 3 4 b 5 6 c;
+#X obj 115 252 print;
+#X obj 115 230 vs.filtertype f;
+#X msg 222 165 s;
+#X msg 222 196 f;
+#X text 128 105 list to filter;
+#X text 251 165 symbol;
+#X text 253 197 float;
+#X text 215 231 default arg: float;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 1;

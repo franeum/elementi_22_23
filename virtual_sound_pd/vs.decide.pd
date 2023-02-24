@@ -1,0 +1,14 @@
+#N canvas 211 310 123 197 10;
+#X obj 13 90 vs.random;
+#X obj 13 13 inlet;
+#X obj 13 134 outlet;
+#X obj 13 112 < 0.5;
+#X obj 13 35 route bang seed;
+#X msg 56 60 seed \$1;
+#X text 51 167 f.bianchi;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
+#X connect 4 1 5 0;
+#X connect 5 0 0 0;

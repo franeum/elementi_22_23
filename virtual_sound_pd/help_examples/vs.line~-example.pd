@@ -1,0 +1,21 @@
+#N canvas 100 106 420 560 10;
+#X obj 45 230 vs.line~;
+#X obj 45 262 vs.number~;
+#X msg 45 105 1 2000;
+#X obj 17 42 vs.dspturn;
+#X msg 54 148 0 \, 1 2000;
+#X text 172 185 goes to 1 in 2 secs \, starting from 0 \,;
+#X msg 64 192 0 \, 1 2000 0 3000;
+#X text 172 198 then comes back to 0 in 3 secs;
+#X text 92 99 goes to 1 in 2 secs \,;
+#X text 92 112 starting from actual value;
+#X text 120 141 goes to 1 in 2 secs \,;
+#X text 120 154 starting from 0;
+#X obj 207 247 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 225 247 bang when done;
+#X connect 0 0 1 0;
+#X connect 0 1 12 0;
+#X connect 2 0 0 0;
+#X connect 4 0 0 0;
+#X connect 6 0 0 0;

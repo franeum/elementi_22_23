@@ -1,0 +1,18 @@
+#N canvas 100 106 420 560 10;
+#X obj 12 16 vs.dspturn;
+#X obj 34 49 noise~;
+#X obj 34 335 dac~;
+#X floatatom 92 86 5 0 0 0 - - -;
+#X floatatom 151 128 5 0 0 0 - - -;
+#X obj 34 151 vs.bandpass~ 2000 10;
+#X text 188 128 Q (float/signal);
+#X obj 34 221 vs.gain~;
+#X text 127 85 center freq (float/signal);
+#X obj 80 179 vs.spectroscope~ 1 280 140;
+#X connect 1 0 5 0;
+#X connect 3 0 5 1;
+#X connect 4 0 5 2;
+#X connect 5 0 7 0;
+#X connect 5 0 9 0;
+#X connect 7 0 2 0;
+#X connect 7 0 2 1;

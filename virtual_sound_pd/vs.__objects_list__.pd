@@ -1,0 +1,71 @@
+#N canvas 0 0 520 800 18;
+#X obj 5 5 cnv 15 110 80 empty empty VIRTUAL 10 40 0 24 -233017 -1 0
+
+;
+
+#X obj 115 5 cnv 15 90 80 empty empty SOUND 10 40 0 24 -233017 -1 0
+
+;
+
+#X obj 205 5 cnv 15 310 80 empty empty LIBRARY 5 40 0 24 -233017 -1
+
+0;
+
+#X obj 325 25 cnv 15 100 40 empty empty object 5 20 0 24 -1 -262144
+
+0;
+
+#X obj 425 25 cnv 15 70 40 empty empty list 5 20 0 24 -1 -262144 0
+
+;
+#X obj 5 95 cnv 15 510 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 10 100 pddp/pddplink categories/category_array.pd -text ARRAY;
+#X obj 5 135 cnv 15 510 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 140 pddp/pddplink categories/category_audio_filter.pd -text AUDIO FILTER;
+#X obj 5 175 cnv 15 510 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 10 180 pddp/pddplink categories/category_audio_routing.pd -text AUDIO ROUTING;
+#X obj 5 215 cnv 15 510 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 220 pddp/pddplink categories/category_conversion.pd -text CONVERSION;
+#X obj 5 255 cnv 15 510 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 10 260 pddp/pddplink categories/category_data_routing.pd -text DATA ROUTING;
+#X obj 5 295 cnv 15 510 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 300 pddp/pddplink categories/category_deterministic_signal_generator.pd -text DETERMINISTIC SIGNAL GENERATOR;
+#X obj 5 335 cnv 15 510 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 10 340 pddp/pddplink categories/category_files.pd -text FILES;
+#X obj 5 375 cnv 15 510 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 380 pddp/pddplink categories/category_gui.pd -text GUI;
+#X obj 5 415 cnv 15 510 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 10 420 pddp/pddplink categories/category_list_operator.pd -text LIST OPERATOR;
+#X obj 5 455 cnv 15 510 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 460 pddp/pddplink categories/category_math.pd -text MATH;
+#X obj 5 495 cnv 15 510 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 10 500 pddp/pddplink categories/category_panning.pd -text PANNING;
+#X obj 5 535 cnv 15 510 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 540 pddp/pddplink categories/category_ramper.pd -text RAMPER;
+#X obj 5 575 cnv 15 510 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 10 580 pddp/pddplink categories/category_random_generator.pd -text RANDOM GENERATOR;
+#X obj 5 615 cnv 15 510 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 620 pddp/pddplink categories/category_random_signal_generator.pd -text RANDOM SIGNAL GENERATOR;
+#X obj 5 655 cnv 15 510 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 10 660 pddp/pddplink categories/category_scaler.pd -text SCALER;
+#X obj 5 695 cnv 15 510 35 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 700 pddp/pddplink categories/category_sequencer.pd -text SEQUENCER;
+#X obj 5 735 cnv 15 510 35 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 10 740 pddp/pddplink categories/category_utility.pd -text UTILITY;

@@ -1,0 +1,11 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 252 vs.scope~;
+#X floatatom 115 120 5 0 0 1 - - -;
+#X text 151 120 frequency (float/signal);
+#X floatatom 196 177 5 0 0 0 - - -;
+#X text 230 176 phase (0-1 \, float);
+#X obj 115 200 vs.rand2~ 1000;
+#X obj 16 45 vs.dspturn;
+#X connect 1 0 5 0;
+#X connect 3 0 5 1;
+#X connect 5 0 0 0;

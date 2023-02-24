@@ -1,0 +1,17 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 210 vs.blrect~;
+#X obj 17 66 vs.dspturn;
+#X floatatom 115 105 5 0 0 0 - - -;
+#X obj 143 150 sig~ 0.5;
+#X floatatom 223 196 5 0 0 0 - - -;
+#X text 202 150 duty cycle (float/signal);
+#X text 258 196 reset phase (float);
+#X text 151 105 frequency (float/signal);
+#X obj 115 232 vs.gain~;
+#X obj 115 344 dac~;
+#X connect 0 0 8 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 0 2;
+#X connect 8 0 9 0;
+#X connect 8 0 9 1;

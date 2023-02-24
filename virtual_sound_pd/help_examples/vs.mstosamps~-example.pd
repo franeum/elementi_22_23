@@ -1,0 +1,11 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.mstosamps~;
+#X obj 115 232 vs.number~;
+#X obj 115 171 sig~;
+#X floatatom 115 143 5 0 0 0 - - -;
+#X text 153 142 millisecs;
+#X text 215 239 samples;
+#X obj 16 45 vs.dspturn;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;

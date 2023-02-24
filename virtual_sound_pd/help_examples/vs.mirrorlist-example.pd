@@ -1,0 +1,8 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.mirrorlist;
+#X obj 115 222 print;
+#X msg 115 141 1 2 3 4 5;
+#X floatatom 190 176 5 0 2 1 type_(0-2) - -;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;

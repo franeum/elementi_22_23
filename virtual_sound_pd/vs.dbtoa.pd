@@ -1,0 +1,11 @@
+#N canvas 564 58 138 194 10;
+#X obj 20 104 pow;
+#X msg 20 76 10 \$1;
+#X obj 20 45 / 20;
+#X obj 20 16 inlet db;
+#X obj 20 132 outlet ampvalue;
+#X text 58 166 f.bianchi;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;

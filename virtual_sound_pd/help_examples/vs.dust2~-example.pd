@@ -1,0 +1,7 @@
+#N canvas 100 106 420 560 10;
+#X floatatom 115 164 5 0 0 1 density - -;
+#X obj 115 252 vs.scope~;
+#X obj 115 200 vs.dust2~ 1000;
+#X obj 18 52 vs.dspturn;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;

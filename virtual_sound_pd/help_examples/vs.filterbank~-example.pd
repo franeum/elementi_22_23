@@ -1,0 +1,72 @@
+#N canvas 100 106 420 560 10;
+#X obj 165 229 vs.spectroscope~ 1 200 100;
+#X obj 115 172 noise~;
+#X obj 12 62 vs.dspturn;
+#X obj 115 200 vs.filterbank~ 8 40 1.5 1000 10;
+#X floatatom 209 104 5 0 0 0 - - -;
+#X obj 115 260 vs.gain~;
+#X obj 115 372 dac~;
+#X obj 298 108 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#N canvas 0 22 768 301 rand_freq 0;
+#X obj 111 65 inlet;
+#X obj 111 231 outlet;
+#X obj 111 206 vs.prepend freq;
+#X obj 111 183 list prepend 1;
+#X obj 111 88 vs.uzi 8;
+#X obj 111 156 vs.group 8;
+#X text 210 85 Generates a list of 8 frequencies values. The list is
+preceeded by the number of first filter from which set frequencise.
+So the list 1 100 200 300 sets frequency 100 Hz in the first filter
+\, 200 in the second and 300 in the third.;
+#X text 211 207 To set frequencies you have to use the keyword "freq"
+;
+#X obj 111 132 + 100;
+#X obj 111 110 random 3900;
+#X connect 0 0 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 9 0;
+#X connect 5 0 3 0;
+#X connect 8 0 5 0;
+#X connect 9 0 8 0;
+#X restore 298 132 pd rand_freq;
+#N canvas 0 22 1008 465 Q_factor 0;
+#X obj 125 63 inlet;
+#X obj 125 359 outlet;
+#X obj 231 281 list prepend 1;
+#X obj 231 259 vs.repeat 8;
+#X obj 231 313 vs.prepend Q;
+#X obj 125 171 list prepend 1;
+#X obj 125 149 vs.repeat 8;
+#X obj 125 203 vs.prepend gain;
+#X obj 125 107 sqrt;
+#X floatatom 125 129 5 0 0 0 - - -;
+#X text 312 315 To set frequencies you have to use the keyword "Q"
+(strictly uppercase);
+#X text 222 204 To set gains you have to use the keyword "gain";
+#X text 218 173 set gains starting from first filter;
+#X text 324 281 set Q's starting from first filter;
+#X text 158 108 gain is square root of Q factor;
+#X connect 0 0 8 0;
+#X connect 0 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 1 0;
+#X connect 8 0 9 0;
+#X connect 9 0 6 0;
+#X restore 209 132 pd Q_factor;
+#X text 206 64 open the subpatches to learn;
+#X text 206 76 how to set filters parameters;
+#X connect 1 0 3 0;
+#X connect 3 0 0 0;
+#X connect 3 0 5 0;
+#X connect 4 0 9 0;
+#X connect 5 0 6 0;
+#X connect 5 0 6 1;
+#X connect 7 0 8 0;
+#X connect 8 0 3 1;
+#X connect 9 0 3 1;

@@ -1,0 +1,10 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.osc~ 0;
+#X obj 115 222 vs.gain~;
+#X obj 12 10 vs.dspturn;
+#X obj 115 334 dac~;
+#X obj 166 171 phasor~ 440;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 0 3 1;
+#X connect 4 0 0 1;

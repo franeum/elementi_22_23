@@ -1,0 +1,10 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 222 print;
+#X obj 115 200 vs.niter 2;
+#X floatatom 172 176 5 0 0 0 - - -;
+#X text 208 175 num of items;
+#X text 182 201 default arg: 2;
+#X msg 115 137 10 20 30 40 50 60 70 80 90 100;
+#X connect 1 0 0 0;
+#X connect 2 0 1 1;
+#X connect 5 0 1 0;

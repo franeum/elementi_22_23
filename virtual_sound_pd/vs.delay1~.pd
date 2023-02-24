@@ -1,0 +1,7 @@
+#N canvas 513 472 158 144 10;
+#X obj 15 17 inlet~;
+#X obj 15 50 rzero_rev~ 0;
+#X obj 15 82 outlet~;
+#X text 83 116 f.bianchi;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;

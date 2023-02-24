@@ -1,0 +1,9 @@
+#N canvas 0 22 176 125 10;
+#X obj 13 15 inlet~;
+#X obj 13 37 max~ 0;
+#X obj 13 59 expr~ log10($v1) * 20;
+#X obj 13 81 outlet~;
+#X text 91 93 f.bianchi;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;

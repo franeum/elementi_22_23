@@ -1,0 +1,9 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.number~;
+#X obj 115 164 osc~ 0.5;
+#X floatatom 202 163 5 0 0 0 - - -;
+#X text 113 143 signal;
+#X text 198 143 update interval (default 50 msecs);
+#X obj 16 45 vs.dspturn;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;

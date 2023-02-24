@@ -1,0 +1,16 @@
+#N canvas 100 106 420 560 10;
+#X msg 115 50 8;
+#X obj 115 72 until;
+#X obj 115 94 random 100;
+#X obj 140 145 vs.pset;
+#X msg 140 167 58 71 89 97 66 8 53 61;
+#X obj 115 116 vs.group 8;
+#X floatatom 115 222 5 0 0 0 - - -;
+#X obj 115 200 vs.listmax;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 5 0 3 0;
+#X connect 5 0 7 0;
+#X connect 7 0 6 0;

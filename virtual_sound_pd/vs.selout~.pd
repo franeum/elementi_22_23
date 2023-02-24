@@ -1,0 +1,18 @@
+#N canvas 293 250 204 222 10;
+#X obj 15 15 inlet~;
+#X obj 15 187 outlet~;
+#X obj 15 135 *~;
+#X obj 90 14 inlet~;
+#X obj 90 96 expr~ $v1 == \$1;
+#X obj 90 69 -~;
+#X obj 105 43 wrap~;
+#X obj 90 118 lop~ 2000;
+#X text 127 181 f.bianchi;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 5 0;
+#X connect 3 0 6 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 1;
+#X connect 7 0 2 1;

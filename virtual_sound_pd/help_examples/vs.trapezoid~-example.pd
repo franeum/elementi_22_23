@@ -1,0 +1,13 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.trapezoid~;
+#X obj 115 137 phasor~ 100;
+#X obj 115 252 vs.scope~;
+#X obj 12 68 vs.dspturn;
+#X floatatom 190 176 5 0 1 0 - - -;
+#X floatatom 115 113 5 0 0 0 - - -;
+#X text 188 138 index (0-1 \, signal);
+#X text 226 176 ramp up/down (float \, 0-1);
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 4 0 0 1;
+#X connect 5 0 1 0;

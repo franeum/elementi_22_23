@@ -1,0 +1,14 @@
+#N canvas 348 382 242 187 10;
+#X obj 16 107 random 8.38861e+06;
+#X obj 16 132 / 8.38861e+06;
+#X obj 16 18 inlet bang;
+#X obj 16 157 outlet float;
+#X obj 16 43 route bang seed;
+#X msg 59 72 seed \$1;
+#X text 112 159 f.bianchi - M.Giri;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 4 0 0 0;
+#X connect 4 1 5 0;
+#X connect 5 0 0 0;

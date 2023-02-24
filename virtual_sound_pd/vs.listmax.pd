@@ -1,0 +1,16 @@
+#N canvas 210 98 333 206 10;
+#X obj 178 53 list length;
+#X obj 7 36 t b l l;
+#X obj 7 8 inlet;
+#X obj 7 146 outlet;
+#X obj 178 82 array size \$0-maximum;
+#X obj 178 146 array define \$0-maximum;
+#X obj 26 82 array set \$0-maximum;
+#X obj 7 114 array max \$0-maximum;
+#X text 222 181 f.bianchi;
+#X connect 0 0 4 0;
+#X connect 1 0 7 0;
+#X connect 1 1 6 0;
+#X connect 1 2 0 0;
+#X connect 2 0 1 0;
+#X connect 7 0 3 0;

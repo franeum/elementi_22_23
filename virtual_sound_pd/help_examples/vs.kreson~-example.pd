@@ -1,0 +1,15 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 222 vs.spectroscope~ 1 200 100;
+#X obj 115 70 noise~;
+#X floatatom 185 166 5 0 0 2 cutoff - -;
+#X floatatom 240 166 5 0 0 2 Q - -;
+#X obj 115 200 vs.kreson~ 2000 10;
+#X floatatom 150 105 5 0 0 2 gain - -;
+#X obj 150 124 sig~ 1;
+#X obj 16 45 vs.dspturn;
+#X connect 1 0 4 0;
+#X connect 2 0 4 2;
+#X connect 3 0 4 3;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 1;

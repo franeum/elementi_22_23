@@ -1,0 +1,10 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 222 print;
+#X obj 115 200 vs.repeat 10;
+#X floatatom 184 174 5 0 0 0 - - -;
+#X msg 115 173 5;
+#X text 111 153 item;
+#X text 183 155 how many;
+#X connect 1 0 0 0;
+#X connect 2 0 1 1;
+#X connect 3 0 1 0;

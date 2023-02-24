@@ -1,0 +1,6 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.scramble;
+#X obj 115 222 print;
+#X msg 115 176 1 2 ciao 3 a 4 5;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;

@@ -1,0 +1,26 @@
+#N canvas 100 106 420 560 10;
+#X obj 40 113 vs.spectroscope~;
+#N canvas 0 22 449 384 messages 0;
+#X obj 63 147 vs.spectroscope~;
+#X msg 63 95 plot \$1;
+#X obj 63 70 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 123 70 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 123 95 logfreq \$1;
+#X msg 203 95 xdim \$1;
+#X msg 263 95 ydim \$1;
+#X floatatom 203 71 5 0 0 0 - - -;
+#X floatatom 263 71 5 0 0 0 - - -;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 5 0;
+#X connect 8 0 6 0;
+#X restore 171 369 pd messages;
+#X obj 40 87 noise~;
+#X obj 16 45 vs.dspturn;
+#X connect 2 0 0 0;

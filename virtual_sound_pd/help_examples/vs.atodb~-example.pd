@@ -1,0 +1,11 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.atodb~;
+#X obj 115 169 sig~;
+#X floatatom 115 143 0 0 1 0 - - -;
+#X obj 115 232 vs.number~;
+#X obj 18 71 vs.dspturn;
+#X text 214 239 deciBels;
+#X text 153 143 amplitude (0-1);
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;

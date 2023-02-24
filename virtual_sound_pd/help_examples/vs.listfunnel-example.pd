@@ -1,0 +1,9 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.listfunnel;
+#X text 202 201 default argument: 0;
+#X floatatom 190 162 5 0 0 1 offset - -;
+#X obj 115 222 print;
+#X msg 115 118 10 a 20 b 30 c 40 d 50;
+#X connect 0 0 3 0;
+#X connect 2 0 0 1;
+#X connect 4 0 0 0;

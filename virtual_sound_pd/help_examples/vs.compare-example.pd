@@ -1,0 +1,14 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.compare;
+#X msg 172 160 1 2 3 4 5;
+#X obj 115 222 print;
+#X msg 115 104 1 2 3 4 5;
+#X msg 126 125 5 4 3 2 1;
+#X msg 188 180 a b c d e 5;
+#X msg 99 82 a b c d e 5;
+#X connect 0 0 2 0;
+#X connect 1 0 0 1;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 1;
+#X connect 6 0 0 0;

@@ -1,0 +1,17 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 131 noise~;
+#X obj 155 232 vs.spectroscope~ 1 200 70;
+#X obj 115 233 vs.gain~;
+#X obj 115 345 dac~;
+#X text 237 201 default arg: 440;
+#X floatatom 226 167 5 0 0 0 - - -;
+#X text 262 167 cutoff freq (float);
+#X text 158 131 source (signal);
+#X obj 10 26 vs.dspturn;
+#X obj 115 200 vs.butterlp~ 5512.5;
+#X connect 0 0 9 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 5 0 9 1;
+#X connect 9 0 1 0;
+#X connect 9 0 2 0;

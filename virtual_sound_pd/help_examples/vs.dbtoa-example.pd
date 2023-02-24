@@ -1,0 +1,8 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 200 vs.dbtoa;
+#X floatatom 115 163 5 -100 6 0 - - -;
+#X floatatom 115 242 0 0 0 1 - - -;
+#X text 112 262 amplitude;
+#X text 112 144 deciBels;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;

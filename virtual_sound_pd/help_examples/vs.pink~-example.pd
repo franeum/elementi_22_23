@@ -1,0 +1,10 @@
+#N canvas 100 106 420 560 10;
+#X obj 115 140 vs.pink~;
+#X obj 175 182 vs.scope~;
+#X obj 115 173 vs.gain~;
+#X obj 115 285 dac~;
+#X obj 16 45 vs.dspturn;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;

@@ -27,11 +27,13 @@ function list()
 function bang()
 {
 	outlet(0, previous);
-	previous = theDict.get(previous);
-	if (Array.isArray(previous)) {
-		var index = get_random_value(previous.length);
-		previous = previous[index];
-	}
+	process(previous);
+}
+
+function start(v)
+{ 
+	process(v);
+	outlet(0, v);
 }
 
 function msg_int(v)
@@ -40,16 +42,13 @@ function msg_int(v)
 	outlet(0, v);
 }
 
-function start(v)
-{ 
+function process(v) {
 	previous = theDict.get(v);
-	
+
 	if (Array.isArray(previous)) {
 		var index = get_random_value(previous.length);
 		previous = previous[index];
-	}
-	
-	outlet(0, v);
+	}	
 }
 
 function anything()
@@ -60,12 +59,18 @@ function anything()
 	bang();
 }
 
-function getDict()
+function gettable()
 {
 	var k = theDict.getkeys(); 
 	
+	post("###\t");
+	post("MARKOV CHAIN TABLE\t");
+	post("###\n");
 	k.forEach(function(x) { 
-		post(x);
+		post("###\t");
+		post(x + ':\t');
+		post(theDict.get(x));
+		post('\n');
 	});
 }
 
